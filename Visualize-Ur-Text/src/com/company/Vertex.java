@@ -5,57 +5,117 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+/*
+    "Implement the Serializable interface
+    when you want to be able to convert
+    an instance of a class into a series
+    of bytes or when you think that a
+    Serializable object might reference
+    an instance of your class.
+    Serializable classes are useful when you want to
+    persist instances of them or send them over a wire."
+                                                         -"Effective Java"
+ */
+
 class Vertex<T> implements VertextInterface<T>, java.io.Serializable
 {
 
     //vertex data field
-    private T lable;
-    private List<Edge> EdgeList;
+    private T label;
+    private List<Edge> edgeList;
     private boolean visited;
     private VertexInterface<T> previousVertex;
-    private double Vertex_cost;
-
-    //vertex method field
+    private double cost;
 
     /*
-        label : 用来标识顶点，如图中的 V0,V1,V2,V3
-        在实际代码中，V0...V3 以字符串的形式表示，就可以用来标识不同的顶点了。
-        因此，需要在Vertex类中添加获得顶点标识的方法---getLabel()
+        construct function
      */
 
+    public Vertex(T _label)
+    {
+        label = _label;
+        edgeList = new LinkedList<Edge>();
+        visited = false;
+        previousVertex = null;
+        cost = 0;
+    }
+
+    @Override
     public T getLable()
     {
-        return lable;
+        return label;
     }
 
-    /*
-        EdgeList : 存放与该顶点关联的边。
-        从上面Edge.java中可以看到，Edge的实质是“顶点”，
-        因为，Edge类除去weight属性，就只剩表示顶点的vertex属性了。
-        借助EdgeList，当给定一个顶点时，就可以访问该顶点的所有邻接点。
-        因此，Vertex.java中就需要实现根据EdgeList中存放的边来遍历
-        某条边的终点(也即相应顶点的各个邻接点) 的迭代器了。
-     */
-    public Iterator<VertexInterface<T>> getNeighborIterator
+    @Override
+    public void visit()
     {
-        return new NeighborIterator;
+        this.visited = true;
+    }
+
+    @Override
+    public void unvisit()
+    {
+        this.visited = false;
+    }
+
+    @Override
+    public boolean visited()
+    {
+        return this.visited;
     }
 
     /*
-        遍历该顶点邻接点的迭代器--为 getNeighborInterator()方法 提供迭代器
-        由于顶点的邻接点以边的形式存储在java.util.List中,因此借助List的迭代器来实现
-        由于顶点的邻接点由Edge类封装起来了--见Edge.java的定义的第一个属性
-        因此，首先获得遍历Edge对象的迭代器,再根据获得的Edge对象解析出邻接点对象
+        add edges between current vertex to endVertex
+
+        @param:edgeWeight is default to zero, which for plain graph.
+        @return:return false when found duplicate edges.
+        
      */
 
+    @Override
+    public boolean addEdge(VertexInterface<T> endVertex,double edgeWeight = 0)
+    {
+        boolean result = false;
+        if (!this.equals(endVertex))
+        {
+            Iterator<VertexInterface<T>> neighbors_Iterator = this.NeighborIterator;
+            boolean duplicate_Edges = false;
 
+            // find whether their exists duplicated edges
+
+            while(!duplicate_Edges && neighbors_Iterator.hasNext())
+            {
+                VertexInterface<T> neighbor_Vertex = neighbors_Iterator.next();
+
+                // we need to override equals method for VertexInterface
+
+                if (endVertex.equals(neighbor_Vertex))
+                {
+                    duplicate_Edges = true;
+                    break;
+                }
+            }
+            if (!duplicate_Edges)
+            {
+                edgeList.add(new Edge(endVertex,edgeWeight));
+                result = true;
+            }
+        }
+        return result;
+    }
+
+    /**Task: 遍历该顶点邻接点的迭代器--为 getNeighborInterator()方法 提供迭代器
+    * 由于顶点的邻接点以边的形式存储在java.util.List中,因此借助List的迭代器来实现
+    * 由于顶点的邻接点由Edge类封装起来了--见Edge.java的定义的第一个属性
+    * 因此，首先获得遍历Edge对象的迭代器,再根据获得的Edge对象解析出邻接点对象
+    */
     private class NeighborIterator implements Iterator<VertexInterface<T>>
     {
         Iterator<Edge> EdgesIterator;
 
         private NeighborIterator()
         {
-            EdgesIterator = EdgeList.iterator();
+            EdgesIterator = edgeList.iterator();
         }
 
         @Override
@@ -75,12 +135,48 @@ class Vertex<T> implements VertextInterface<T>, java.io.Serializable
             {
                 throw new NoSuchElementException();
             }
+            return nextNeighbor;
         }
 
         @Override
-        public remove()
+        public void remove()
         {
-            throw new OperationNotSupportedException();
+            throw new UnsupportedOperationException();
+        }
+    }
+
+    private class WeightIterator implements Iterator
+    {
+        private Iterator<Edge> edgesIterator;
+        private WeightIterator()
+        {
+            edgesIterator = edgeList.iterator();
+        }
+
+        @Override
+        public boolean hasNext() {
+            return edgesIterator.hasNext();
+        }
+
+        @Override
+        public Double next() {
+            Double result;
+            if (edgesIterator.hasNext())
+            {
+                Edge edge = edgesIterator.next();
+                result = edge.getWeight();
+            }
+            else
+            {
+                throw new NoSuchElementException();
+            }
+            return new Double(result);
+        }
+
+        @Override
+        public void remove()
+        {
+            throw new UnsupportedOperationException();
         }
     }
 
