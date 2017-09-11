@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Visualize-Ur-Text.iml" filepath="$PROJECT_DIR$/.idea/Visualize-Ur-Text.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VisualizeUrText.iml" filepath="$PROJECT_DIR$/VisualizeUrText.iml" />
     </modules>
   </component>
 </project>
