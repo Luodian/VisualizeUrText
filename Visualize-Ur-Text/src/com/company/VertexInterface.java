@@ -15,16 +15,16 @@ public interface VertexInterface<T>
     public void unvisit();
     public boolean isVisited();
 
-    public boolean addEdge(VertexInterface<T> endVertex,double edgeWeight);
+    public void addEdge(VertexInterface<T> endVertex,double edgeWeight);
 
-    public boolean addEdge(VertexInterface<T> endVertex);
+    public void addEdge(VertexInterface<T> endVertex);
 
     /*
         Task:make a iterator to visit out_edge from this vertex
         @return:an iterator pointed to this out_edge
      */
 
-    public Iterator<VertexInterface<T>> getNeighborIterator();
+    public Iterator<Vertex<T>.Edge> getNeighborIterator();
 
     /*
         Task:make a iterator
@@ -32,7 +32,6 @@ public interface VertexInterface<T>
      */
     public Iterator<Double> getWeightIterator();
     public boolean hasNeighbor();
-    public VertexInterface<T> getUnvisitedNeighbor();
     public void setPredecessor(VertexInterface<T> predecessor);
     public VertexInterface<T> getPredecessor();
     public boolean hasPredecessor();

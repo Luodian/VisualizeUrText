@@ -15,6 +15,7 @@ public class DirectedGraph<T> implements DirectedGraphInterface<T>,java.io.Seria
     public DirectedGraph()
     {
         VerticesMap_ObjToIter = new LinkedHashMap<>();
+        edgeCount = 0;
     }
 
     @Override
@@ -24,27 +25,22 @@ public class DirectedGraph<T> implements DirectedGraphInterface<T>,java.io.Seria
     }
 
     @Override
-    public boolean addEdge(T begin,T end,double edgeWeight)
+    public void addEdge(T begin,T end,double edgeWeight)
     {
-        boolean result = false;
         VertexInterface<T> beginVertex = VerticesMap_ObjToIter.get(begin);
         VertexInterface<T> endVertex = VerticesMap_ObjToIter.get(end);
 
         if (beginVertex != null && endVertex != null)
         {
-            result = beginVertex.addEdge(endVertex,edgeWeight);
+            beginVertex.addEdge(endVertex,edgeWeight);
         }
-        if (result)
-        {
-            edgeCount ++;
-        }
-        return result;
+        edgeCount ++;
     }
 
     @Override
-    public boolean addEdge(T begin,T end)
+    public void addEdge(T begin,T end)
     {
-        return addEdge(begin,end,0);
+        addEdge(begin,end,0);
     }
 
     @Override
@@ -54,17 +50,17 @@ public class DirectedGraph<T> implements DirectedGraphInterface<T>,java.io.Seria
         VertexInterface<T> beginVertex = VerticesMap_ObjToIter.get(begin);
         VertexInterface<T> endVertex = VerticesMap_ObjToIter.get(end);
 
-        if (beginVertex == null || endVertex == null || beginVertex.hasNeighbor() == false)
+        if (beginVertex == null || endVertex == null || !beginVertex.hasNeighbor())
         {
             return found;
         }
         else
         {
-            Iterator<VertexInterface<T>> neighbors = beginVertex.getNeighborIterator();
-            while (!found && neighbors.hasNext())
+            Iterator<Vertex<T>.Edge> nextEdgeIterator = beginVertex.getNeighborIterator();
+            while (!found && nextEdgeIterator.hasNext())
             {
-                VertexInterface<T> neighbor = neighbors.next();
-                if (endVertex.equals(neighbor))
+                Vertex<T>.Edge nextEdge = nextEdgeIterator.next();
+                if (endVertex.equals(nextEdge.getEndVertex()))
                 {
                     found = true;
                 }

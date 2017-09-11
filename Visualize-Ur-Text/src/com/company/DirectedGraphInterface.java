@@ -8,8 +8,8 @@ public interface DirectedGraphInterface<T>
      */
 
     public void addVertex(T vertexLabel);
-    public boolean addEdge(T begin,T end,double edgeWeight);
-    public boolean addEdge(T begin,T end);
+    public void addEdge(T begin,T end,double edgeWeight);
+    public void addEdge(T begin,T end);
     public boolean hasEdge(T begin,T end);
     public boolean isEmpty();
     public int getNumberOfVertices();

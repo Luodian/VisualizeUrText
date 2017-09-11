@@ -43,11 +43,16 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
         {
             return weight;
         }
+
+        protected void setWeight(Double _w)
+        {
+            weight = _w;
+        }
     }
     /**Task:
     *   用来做edgeList的迭代指针
     */
-    private class NeighborIterator implements Iterator<VertexInterface<T>>
+    private class NeighborIterator implements Iterator<Edge>
     {
 
         // data field
@@ -65,18 +70,18 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
         }
 
         @Override
-        public VertexInterface<T> next() {
-            VertexInterface<T> nextNeighbor = null;
+        public Edge next()
+        {
+            Edge nextEdge;
             if (edgesIterator.hasNext())
             {
-                Edge edgeToNextNeighbor = edgesIterator.next();
-                nextNeighbor = (VertexInterface<T>) edgeToNextNeighbor.getEndVertex();
+                nextEdge = edgesIterator.next();
             }
             else
             {
                 throw new NoSuchElementException();
             }
-            return nextNeighbor;
+            return nextEdge;
         }
 
         @Override
@@ -177,38 +182,37 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
      */
 
     @Override
-    public boolean addEdge(VertexInterface<T> endVertex,double edgeWeight)
+    public void addEdge(VertexInterface<T> endVertex,double edgeWeight)
     {
-        boolean result = false;
         if (!this.equals(endVertex))
         {
-            Iterator< VertexInterface<T> > neighbors_Iterator;
-            neighbors_Iterator = this.getNeighborIterator();
+            Iterator< Edge > edgeIterator;
+            edgeIterator = this.getNeighborIterator();
             boolean duplicate_Edges = false;
 
             // find whether their exists duplicated edges
 
-            while(!duplicate_Edges && neighbors_Iterator.hasNext())
+            while(!duplicate_Edges && edgeIterator.hasNext())
             {
                 // 使用.next()方法获取边迭代器所指的终点。
-                
-                VertexInterface<T> neighbor_Vertex = neighbors_Iterator.next();
+                Edge nextEdge = edgeIterator.next();
+                VertexInterface<T> neighbor_Vertex = nextEdge.getEndVertex();
 
                 // we need to override equals method for VertexInterface
 
                 if (endVertex.equals(neighbor_Vertex))
                 {
                     duplicate_Edges = true;
+                    // sum up new edge weight;
+                    nextEdge.setWeight(nextEdge.getWeight() + edgeWeight);
                     break;
                 }
             }
             if (!duplicate_Edges)
             {
                 edgeList.add(new Edge(endVertex,edgeWeight));
-                result = true;
             }
         }
-        return result;
     }
 
     /*
@@ -216,13 +220,13 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
      */
 
     @Override
-    public boolean addEdge(VertexInterface<T> endVertex)
+    public void addEdge(VertexInterface<T> endVertex)
     {
-        return addEdge(endVertex,0);
+        addEdge(endVertex,0);
     }
 
     @Override
-    public Iterator<VertexInterface<T>> getNeighborIterator()
+    public Iterator< Edge > getNeighborIterator()
     {
         return new NeighborIterator();
     }
@@ -237,23 +241,6 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
     public boolean hasNeighbor()
     {
         return !(edgeList.isEmpty());
-    }
-
-    @Override
-    public VertexInterface<T> getUnvisitedNeighbor()
-    {
-        VertexInterface<T> result = null;
-        Iterator<VertexInterface<T>> neighbors = getNeighborIterator();
-        while(neighbors.hasNext() && result == null)
-        {
-            VertexInterface<T> nextNeighbor = neighbors.next();
-            // if the next vertex haven't been visited
-            if (!nextNeighbor.isVisited())
-            {
-                result = nextNeighbor;
-            }
-        }
-        return result;
     }
 
     @Override
