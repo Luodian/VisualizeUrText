@@ -17,13 +17,12 @@ import java.util.NoSuchElementException;
     persist instances of them or send them over a wire."
                                                          -"Effective Java"
  */
-
 class Vertex<T> implements VertexInterface<T>, java.io.Serializable
 {
-    /*
-        Edge类封装了出边，内部包含一个weight属性以及出边的下一个结点。
-        把protected class似乎可以当成是C++的类内部结构体来使用。
-     */
+    /**
+    *  Edge类封装了出边，内部包含一个weight属性以及出边的下一个结点。
+    *  把protected class似乎可以当成是C++的类内部结构体来使用。
+    */
     protected class Edge implements java.io.Serializable
     {
         private VertexInterface<T> vertex;
@@ -45,31 +44,32 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
             return weight;
         }
     }
-    /**Task: 遍历该顶点邻接点的迭代器--为 getNeighborInterator()方法 提供迭代器
-    * 由于顶点的邻接点以边的形式存储在java.util.List中,因此借助List的迭代器来实现
-    * 由于顶点的邻接点由Edge类封装起来了--见Edge.java的定义的第一个属性
-    * 因此，首先获得遍历Edge对象的迭代器,再根据获得的Edge对象解析出邻接点对象
+    /**Task:
+    *   用来做edgeList的迭代指针
     */
     private class NeighborIterator implements Iterator<VertexInterface<T>>
     {
-        Iterator<Edge> EdgesIterator;
 
+        // data field
+        Iterator<Edge> edgesIterator;
+
+        // construct function
         private NeighborIterator()
         {
-            EdgesIterator = edgeList.iterator();
+            edgesIterator = edgeList.iterator();
         }
 
         @Override
         public boolean hasNext() {
-            return EdgesIterator.hasNext();
+            return edgesIterator.hasNext();
         }
 
         @Override
         public VertexInterface<T> next() {
             VertexInterface<T> nextNeighbor = null;
-            if (EdgesIterator.hasNext())
+            if (edgesIterator.hasNext())
             {
-                Edge edgeToNextNeighbor = EdgesIterator.next();
+                Edge edgeToNextNeighbor = edgesIterator.next();
                 nextNeighbor = (VertexInterface<T>) edgeToNextNeighbor.getEndVertex();
             }
             else
@@ -85,7 +85,10 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
             throw new UnsupportedOperationException();
         }
     }
-
+    /**Task: 生成一个遍历该顶点所有邻接边的权值的迭代器
+     * 权值是Edge类的属性,因此先获得一个遍历Edge对象的迭代器,取得Edge对象,再获得权值
+     * @param 权值的类型
+     */
     private class WeightIterator implements Iterator
     {
         private Iterator<Edge> edgesIterator;
@@ -95,12 +98,14 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
         }
 
         @Override
-        public boolean hasNext() {
+        public boolean hasNext()
+        {
             return edgesIterator.hasNext();
         }
 
         @Override
-        public Double next() {
+        public Double next()
+        {
             Double result;
             if (edgesIterator.hasNext())
             {
@@ -167,10 +172,8 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
 
     /*
         add edges between current vertex to endVertex
-
         @param:edgeWeight can be zero, but java didn't support default param, we need use polymorphism functions.
         @return:return false when found duplicate edges.
-
      */
 
     @Override
@@ -179,7 +182,7 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
         boolean result = false;
         if (!this.equals(endVertex))
         {
-            Iterator<VertexInterface<T>> neighbors_Iterator;
+            Iterator< VertexInterface<T> > neighbors_Iterator;
             neighbors_Iterator = this.getNeighborIterator();
             boolean duplicate_Edges = false;
 
@@ -187,6 +190,8 @@ class Vertex<T> implements VertexInterface<T>, java.io.Serializable
 
             while(!duplicate_Edges && neighbors_Iterator.hasNext())
             {
+                // 使用.next()方法获取边迭代器所指的终点。
+                
                 VertexInterface<T> neighbor_Vertex = neighbors_Iterator.next();
 
                 // we need to override equals method for VertexInterface

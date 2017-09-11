@@ -23,6 +23,7 @@ public interface VertexInterface<T>
         Task:make a iterator to visit out_edge from this vertex
         @return:an iterator pointed to this out_edge
      */
+
     public Iterator<VertexInterface<T>> getNeighborIterator();
 
     /*
