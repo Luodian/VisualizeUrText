@@ -59,7 +59,7 @@ class Vertex<T> implements VertextInterface<T>, java.io.Serializable
     }
 
     @Override
-    public boolean visited()
+    public boolean isVisited()
     {
         return this.visited;
     }
@@ -67,9 +67,9 @@ class Vertex<T> implements VertextInterface<T>, java.io.Serializable
     /*
         add edges between current vertex to endVertex
 
-        @param:edgeWeight is default to zero, which for plain graph.
+        @param:edgeWeight can be zero, but java didn't support default param, we need use polymorphism functions.
         @return:return false when found duplicate edges.
-        
+
      */
 
     @Override
@@ -104,11 +104,105 @@ class Vertex<T> implements VertextInterface<T>, java.io.Serializable
         return result;
     }
 
+    /*
+        polymorphism for weight equals to 0;
+     */
+
+    @Override
+    public boolean connect(VertexInterface<T> endVertex)
+    {
+        return connect(endVertex,0);
+    }
+
+    @Override
+    public Iterator<VertexInterface<T>> getNeighborIterator()
+    {
+        return new NeighborIterator();
+    }
+
+    @Override
+    public Iterator getWeightIterator()
+    {
+        return new WeightIterator();
+    }
+
+    @Override
+    public boolean hasNeighbor()
+    {
+        return !(edgeList.isEmpty());
+    }
+
+    @Override
+    public VertexInterface<T> getUnvisitedNeighbor()
+    {
+        VertexInterface<T> result = null;
+        Iterator<VertexInterface<T>> neighbors = getNeighborIterator();
+        while(neighbors.hasNext() && result == null)
+        {
+            VertexInterface<T> nextNeighbor = neighbors.next();
+            // if the next vertex haven't been visited
+            if (!nextNeighbor.isVisited())
+            {
+                result = nextNeighbor;
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public void setPredecessor(VertexInterface<T> predecessor)
+    {
+        this.previousVertex = predecessor;
+    }
+
+    @Override
+    public VertexInterface<T> getPredecessor()
+    {
+        return this.previousVertex;
+    }
+
+    @Override
+    public boolean hasPredecessor()
+    {
+        return this.previousVertex != null;
+    }
+
+    @Override
+    public void setCost(double _cost)
+    {
+        cost = _cost;
+    }
+
+    @Override
+    public double getCost()
+    {
+        return cost;
+    }
+
+    //we need to rewrite equals method to make sure we can compare two Vertexs.
+    @Override
+    public boolean equals(Object other)
+    {
+        boolean result;
+        if ((other == null) || (getClass() != other.getClass()))
+        {
+            result = false;
+        }
+        else
+        {
+            Vertex<T> otherVertex = (Vertex<T>) other;
+            // using label to judge whether it's equal.
+            result = label.equals(otherVertex.label);
+        }
+        return result;
+    }
+
     /**Task: 遍历该顶点邻接点的迭代器--为 getNeighborInterator()方法 提供迭代器
     * 由于顶点的邻接点以边的形式存储在java.util.List中,因此借助List的迭代器来实现
     * 由于顶点的邻接点由Edge类封装起来了--见Edge.java的定义的第一个属性
     * 因此，首先获得遍历Edge对象的迭代器,再根据获得的Edge对象解析出邻接点对象
     */
+
     private class NeighborIterator implements Iterator<VertexInterface<T>>
     {
         Iterator<Edge> EdgesIterator;
