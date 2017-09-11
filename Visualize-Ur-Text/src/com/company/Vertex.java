@@ -18,8 +18,108 @@ import java.util.NoSuchElementException;
                                                          -"Effective Java"
  */
 
-class Vertex<T> implements VertextInterface<T>, java.io.Serializable
+class Vertex<T> implements VertexInterface<T>, java.io.Serializable
 {
+    /*
+        Edge类封装了出边，内部包含一个weight属性以及出边的下一个结点。
+        把protected class似乎可以当成是C++的类内部结构体来使用。
+     */
+    protected class Edge implements java.io.Serializable
+    {
+        private VertexInterface<T> vertex;
+        public Double weight;
+
+        protected Edge(VertexInterface<T> _v, double _w)
+        {
+            vertex = _v;
+            weight = _w;
+        }
+
+        protected VertexInterface<T> getEndVertex()
+        {
+            return vertex;
+        }
+
+        protected double getWeight()
+        {
+            return weight;
+        }
+    }
+    /**Task: 遍历该顶点邻接点的迭代器--为 getNeighborInterator()方法 提供迭代器
+    * 由于顶点的邻接点以边的形式存储在java.util.List中,因此借助List的迭代器来实现
+    * 由于顶点的邻接点由Edge类封装起来了--见Edge.java的定义的第一个属性
+    * 因此，首先获得遍历Edge对象的迭代器,再根据获得的Edge对象解析出邻接点对象
+    */
+    private class NeighborIterator implements Iterator<VertexInterface<T>>
+    {
+        Iterator<Edge> EdgesIterator;
+
+        private NeighborIterator()
+        {
+            EdgesIterator = edgeList.iterator();
+        }
+
+        @Override
+        public boolean hasNext() {
+            return EdgesIterator.hasNext();
+        }
+
+        @Override
+        public VertexInterface<T> next() {
+            VertexInterface<T> nextNeighbor = null;
+            if (EdgesIterator.hasNext())
+            {
+                Edge edgeToNextNeighbor = EdgesIterator.next();
+                nextNeighbor = (VertexInterface<T>) edgeToNextNeighbor.getEndVertex();
+            }
+            else
+            {
+                throw new NoSuchElementException();
+            }
+            return nextNeighbor;
+        }
+
+        @Override
+        public void remove()
+        {
+            throw new UnsupportedOperationException();
+        }
+    }
+
+    private class WeightIterator implements Iterator
+    {
+        private Iterator<Edge> edgesIterator;
+        private WeightIterator()
+        {
+            edgesIterator = edgeList.iterator();
+        }
+
+        @Override
+        public boolean hasNext() {
+            return edgesIterator.hasNext();
+        }
+
+        @Override
+        public Double next() {
+            Double result;
+            if (edgesIterator.hasNext())
+            {
+                Edge edge = edgesIterator.next();
+                result = edge.getWeight();
+            }
+            else
+            {
+                throw new NoSuchElementException();
+            }
+            return new Double(result);
+        }
+
+        @Override
+        public void remove()
+        {
+            throw new UnsupportedOperationException();
+        }
+    }
 
     //vertex data field
     private T label;
@@ -42,7 +142,7 @@ class Vertex<T> implements VertextInterface<T>, java.io.Serializable
     }
 
     @Override
-    public T getLable()
+    public T getLabel()
     {
         return label;
     }
@@ -74,12 +174,13 @@ class Vertex<T> implements VertextInterface<T>, java.io.Serializable
      */
 
     @Override
-    public boolean addEdge(VertexInterface<T> endVertex,double edgeWeight = 0)
+    public boolean addEdge(VertexInterface<T> endVertex,double edgeWeight)
     {
         boolean result = false;
         if (!this.equals(endVertex))
         {
-            Iterator<VertexInterface<T>> neighbors_Iterator = this.NeighborIterator;
+            Iterator<VertexInterface<T>> neighbors_Iterator;
+            neighbors_Iterator = this.getNeighborIterator();
             boolean duplicate_Edges = false;
 
             // find whether their exists duplicated edges
@@ -110,9 +211,9 @@ class Vertex<T> implements VertextInterface<T>, java.io.Serializable
      */
 
     @Override
-    public boolean connect(VertexInterface<T> endVertex)
+    public boolean addEdge(VertexInterface<T> endVertex)
     {
-        return connect(endVertex,0);
+        return addEdge(endVertex,0);
     }
 
     @Override
@@ -197,84 +298,6 @@ class Vertex<T> implements VertextInterface<T>, java.io.Serializable
         }
         return result;
     }
-
-    /**Task: 遍历该顶点邻接点的迭代器--为 getNeighborInterator()方法 提供迭代器
-    * 由于顶点的邻接点以边的形式存储在java.util.List中,因此借助List的迭代器来实现
-    * 由于顶点的邻接点由Edge类封装起来了--见Edge.java的定义的第一个属性
-    * 因此，首先获得遍历Edge对象的迭代器,再根据获得的Edge对象解析出邻接点对象
-    */
-
-    private class NeighborIterator implements Iterator<VertexInterface<T>>
-    {
-        Iterator<Edge> EdgesIterator;
-
-        private NeighborIterator()
-        {
-            EdgesIterator = edgeList.iterator();
-        }
-
-        @Override
-        public boolean hasNext() {
-            return EdgesIterator.hasNext();
-        }
-
-        @Override
-        public VertexInterface<T> next() {
-            VertexInterface<T> nextNeighbor = null;
-            if (EdgesIterator.hasNext())
-            {
-                Edge edgeToNextNeighbor = EdgesIterator.next();
-                nextNeighbor = edgeToNextNeighbor.getEndVertex();
-            }
-            else
-            {
-                throw new NoSuchElementException();
-            }
-            return nextNeighbor;
-        }
-
-        @Override
-        public void remove()
-        {
-            throw new UnsupportedOperationException();
-        }
-    }
-
-    private class WeightIterator implements Iterator
-    {
-        private Iterator<Edge> edgesIterator;
-        private WeightIterator()
-        {
-            edgesIterator = edgeList.iterator();
-        }
-
-        @Override
-        public boolean hasNext() {
-            return edgesIterator.hasNext();
-        }
-
-        @Override
-        public Double next() {
-            Double result;
-            if (edgesIterator.hasNext())
-            {
-                Edge edge = edgesIterator.next();
-                result = edge.getWeight();
-            }
-            else
-            {
-                throw new NoSuchElementException();
-            }
-            return new Double(result);
-        }
-
-        @Override
-        public void remove()
-        {
-            throw new UnsupportedOperationException();
-        }
-    }
-
 }
 
 
