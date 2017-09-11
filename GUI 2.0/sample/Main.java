@@ -115,6 +115,28 @@ public class Main extends Application {
        Button shortestPath = new Button("最短路径");
        Button randomWalk = new Button("随机游走");
 
+       Button start = new Button("开始");
+       Button nextStep = new Button("下一步");
+       Button stop = new Button("终止");
+
+       GridPane gridRight = new GridPane();
+       gridRight.setVgap(40);
+       gridRight.setHgap(8);
+       gridRight.setPadding(new Insets(130,30,30,10));
+       gridRight.add(bridgeWord,1,0);
+       gridRight.add(generateNewText,2,1);
+       gridRight.add(shortestPath,0,1);
+       gridRight.add(randomWalk,1,2);
+
+       GridPane subGrid = new GridPane();
+       subGrid.setVgap(20);
+       subGrid.setVisible(false);
+       subGrid.add(start,1,3);
+       subGrid.add(nextStep,1,4);
+       subGrid.add(stop,1,5);
+       gridRight.add(subGrid,1,3);
+
+
        bridgeWord.setOnAction(new EventHandler<ActionEvent>() {
            @Override
            public void handle(ActionEvent event) {
@@ -136,17 +158,19 @@ public class Main extends Application {
        randomWalk.setOnAction(new EventHandler<ActionEvent>() {
            @Override
            public void handle(ActionEvent event) {
-               randomWalkWindow().show();
+//               randomWalkWindow().show();
+               if(subGrid.isVisible()){
+                   subGrid.setVisible(false);
+                   randomWalk.setText("随机游走");
+               }
+               else {
+                   subGrid.setVisible(true);
+                   randomWalk.setText("关闭");
+               }
+
            }
        });
-       GridPane gridRight = new GridPane();
-       gridRight.setVgap(40);
-       gridRight.setHgap(8);
-       gridRight.setPadding(new Insets(130,30,30,10));
-       gridRight.add(bridgeWord,1,0);
-       gridRight.add(generateNewText,2,1);
-       gridRight.add(shortestPath,0,1);
-       gridRight.add(randomWalk,1,2);
+
        return gridRight;
    }
 
@@ -364,6 +388,9 @@ public class Main extends Application {
 
         return randomStage;
     }
+
+
+
 
     public static void main(String[] args) {
         launch(args);
