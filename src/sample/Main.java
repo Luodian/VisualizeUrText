@@ -1,34 +1,27 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.DragEvent;
-import javafx.scene.input.Dragboard;
-import javafx.scene.input.TransferMode;
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+
 import java.awt.*;
 import java.io.*;
-import java.util.logging.Level;
 
 public class Main extends Application {
-
-    DirectedGraphInterface<String>  graph = new DirectedGraph<>();
-
     private final Desktop desktop = Desktop.getDesktop();
     private String processLine="";                              //处理后的文本
     private String originLine="";                               //处理前的文本
@@ -85,7 +78,7 @@ public class Main extends Application {
             public void handle(ActionEvent event) {
                 //调用画图函数
 
-                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("03.jpg")));
+                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/resources/images/03.jpg")));
         }
         });
 //        graphButton.widthProperty().addListener(new ChangeListener<Number>() {
@@ -101,7 +94,7 @@ public class Main extends Application {
     /*添加中间布局*/
    public StackPane addCenter(){
        StackPane middleGraph = new StackPane();
-       Image digraphImage = new Image(Main.class.getResourceAsStream("有向图.jpg"));
+       Image digraphImage = new Image(Main.class.getResourceAsStream("/resources/images/有向图.jpg"));
        digraphImageView.setImage(digraphImage);
        digraphImageView.setFitWidth(750);
        digraphImageView.setFitHeight(550);
@@ -163,18 +156,18 @@ public class Main extends Application {
            public void handle(ActionEvent event) {
 //               randomWalkWindow().show();
 
-               System.out.println("Graph is Empty? " + graph.isEmpty());
-
-               //要注意先加点再连边。
-               graph.addVertex("Visualize");
-               graph.addVertex("Ur");
-               graph.addVertex("Text");
-
-               graph.addEdge("Visualize","Ur",1);
-               graph.addEdge("Ur","Text",1);
-               graph.addEdge("Ur","Text",1);
-
-               System.out.println(graph.hasEdge("Ur","Text"));
+//               System.out.println("Graph is Empty? " + graph.isEmpty());
+//
+//               //要注意先加点再连边。
+//               graph.addVertex("Visualize");
+//               graph.addVertex("Ur");
+//               graph.addVertex("Text");
+//
+//               graph.addEdge("Visualize","Ur",1);
+//               graph.addEdge("Ur","Text",1);
+//               graph.addEdge("Ur","Text",1);
+//
+//               System.out.println(graph.hasEdge("Ur","Text"));
 
                if(subGrid.isVisible()){
                    subGrid.setVisible(false);
@@ -213,10 +206,10 @@ public class Main extends Application {
             originLine+=line;
             for (char chr:line.toCharArray()) {
                 if(chr==','||chr=='.'||chr=='?'||chr=='!'||chr==34||chr==39){
-                    processLine+=' ';
+                    processLine += ' ';
                 }
                 else if((chr>='A'&&chr<='Z')||(chr>='a'&&chr<='z')){
-                    processLine+=chr;
+                    processLine += chr;
                 }
             }
             try {
@@ -411,5 +404,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
 }

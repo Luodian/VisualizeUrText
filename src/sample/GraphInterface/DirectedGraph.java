@@ -1,4 +1,4 @@
-package sample;
+package sample.GraphInterface;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -21,7 +21,7 @@ public class DirectedGraph<T> implements DirectedGraphInterface<T>,java.io.Seria
     @Override
     public void addVertex(T vertexLabel)
     {
-        VerticesMap_ObjToIter.put(vertexLabel,new Vertex<T>(vertexLabel));
+        VerticesMap_ObjToIter.put(vertexLabel, new Vertex<>(vertexLabel));
     }
 
     @Override
