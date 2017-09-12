@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -16,6 +17,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -28,6 +30,7 @@ public class Main extends Application {
     private  ImageView digraphImageView= new ImageView();      //中间的有向图
 //    private
 
+
     @Override
     public void start(Stage primaryStage) throws Exception{
 
@@ -36,8 +39,17 @@ public class Main extends Application {
         border.setLeft(addGridLeft(primaryStage));
         border.setCenter(addCenter());
         border.setRight(addGridRight());
-        Scene scene = new Scene(border,1320,650);
+
+        Rectangle2D currentScreenBounds = Screen.getPrimary().getVisualBounds();
+
+        double screenHeight = currentScreenBounds.getHeight();
+        double screenWidth = currentScreenBounds.getWidth();
+
+        System.out.println(screenHeight + "+" + screenWidth);
+
+        Scene scene = new Scene(border, screenWidth - 200, screenHeight - 100);
         scene.getStylesheets().add(Main.class.getResource("Main.css").toExternalForm());
+
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -78,7 +90,7 @@ public class Main extends Application {
             public void handle(ActionEvent event) {
                 //调用画图函数
 
-                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/resources/images/03.jpg")));
+                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/images/03.jpg")));
         }
         });
 //        graphButton.widthProperty().addListener(new ChangeListener<Number>() {
@@ -94,7 +106,7 @@ public class Main extends Application {
     /*添加中间布局*/
    public StackPane addCenter(){
        StackPane middleGraph = new StackPane();
-       Image digraphImage = new Image(Main.class.getResourceAsStream("/resources/images/有向图.jpg"));
+       Image digraphImage = new Image(Main.class.getResourceAsStream("/sample/resources/images/test.jpg"));
        digraphImageView.setImage(digraphImage);
        digraphImageView.setFitWidth(750);
        digraphImageView.setFitHeight(550);
@@ -226,7 +238,7 @@ public class Main extends Application {
         originText.setMaxWidth(150);
         originText.setMaxHeight(150);
 
-        Image image = new Image("http://2.pic.9ht.com/up/2015-9/201591815454.jpg");
+        Image image = new Image("/sample/resources/images/data-syncing-512.png");
         ImageView imageView = new ImageView(image);
         imageView.setFitHeight(80);
         imageView.setFitWidth(80);
