@@ -1,5 +1,8 @@
 package sample;
 
+import guru.nidi.graphviz.engine.Format;
+import guru.nidi.graphviz.engine.Graphviz;
+import guru.nidi.graphviz.model.Graph;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -23,13 +26,19 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.io.*;
 
+import static guru.nidi.graphviz.model.Factory.graph;
+import static guru.nidi.graphviz.model.Factory.node;
+
 public class Main extends Application {
     private final Desktop desktop = Desktop.getDesktop();
     private String processLine="";                              //处理后的文本
     private String originLine="";                               //处理前的文本
     private  ImageView digraphImageView= new ImageView();      //中间的有向图
 //    private
+Rectangle2D currentScreenBounds = Screen.getPrimary().getVisualBounds();
 
+    double screenHeight = currentScreenBounds.getHeight();
+    double screenWidth = currentScreenBounds.getWidth();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -40,14 +49,8 @@ public class Main extends Application {
         border.setCenter(addCenter());
         border.setRight(addGridRight());
 
-        Rectangle2D currentScreenBounds = Screen.getPrimary().getVisualBounds();
 
-        double screenHeight = currentScreenBounds.getHeight();
-        double screenWidth = currentScreenBounds.getWidth();
-
-        System.out.println(screenHeight + "+" + screenWidth);
-
-        Scene scene = new Scene(border, screenWidth - 200, screenHeight - 100);
+        Scene scene = new Scene(border, screenWidth - 150, screenHeight - 100);
         scene.getStylesheets().add(Main.class.getResource("Main.css").toExternalForm());
 
         primaryStage.setTitle("Hello World");
@@ -70,7 +73,7 @@ public class Main extends Application {
         GridPane gridLeft = new GridPane();
         gridLeft.setHgap(10);
         gridLeft.setVgap(70);
-        gridLeft.setPadding(new Insets(200,20,200,50));
+        gridLeft.setPadding(new Insets(200, 20, 200, 20));
 
         final Button openButton = new Button("选择文件");
         final Button graphButton = new Button("绘制图形");
@@ -108,10 +111,10 @@ public class Main extends Application {
        StackPane middleGraph = new StackPane();
        Image digraphImage = new Image(Main.class.getResourceAsStream("/sample/resources/images/test.jpg"));
        digraphImageView.setImage(digraphImage);
-       digraphImageView.setFitWidth(750);
-       digraphImageView.setFitHeight(550);
+       digraphImageView.setFitWidth(screenWidth - 750);
+       digraphImageView.setFitHeight(screenHeight - 200);
        digraphImageView.setSmooth(true);
-       middleGraph.setPadding(new Insets(40,0,40,0));
+       middleGraph.setPadding(new Insets(20, 0, 20, 0));
        middleGraph.getChildren().add(digraphImageView);
        return middleGraph;
    }
@@ -167,7 +170,6 @@ public class Main extends Application {
            @Override
            public void handle(ActionEvent event) {
 //               randomWalkWindow().show();
-
 //               System.out.println("Graph is Empty? " + graph.isEmpty());
 //
 //               //要注意先加点再连边。
@@ -178,7 +180,6 @@ public class Main extends Application {
 //               graph.addEdge("Visualize","Ur",1);
 //               graph.addEdge("Ur","Text",1);
 //               graph.addEdge("Ur","Text",1);
-//
 //               System.out.println(graph.hasEdge("Ur","Text"));
 
                if(subGrid.isVisible()){
@@ -412,10 +413,9 @@ public class Main extends Application {
     }
 
 
-
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         launch(args);
-
+        Graph g = graph("example1").directed().with(node("a").link(node("b")));
+        Graphviz.fromGraph(g).width(200).render(Format.PNG).toFile(new File("example/ex1.png"));
     }
 }
