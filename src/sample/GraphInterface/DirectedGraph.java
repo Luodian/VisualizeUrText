@@ -104,4 +104,9 @@ public class DirectedGraph<T> implements DirectedGraphInterface<T>,java.io.Seria
             VertexInterface<T> endVertex = edge.getEndVertex();
         }
     }
+
+    @Override
+    public Map<T,VertexInterface<T>> getVerTex(){
+        return VerticesMap_ObjToIter;
+    }
 }

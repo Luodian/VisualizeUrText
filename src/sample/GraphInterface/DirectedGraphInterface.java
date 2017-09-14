@@ -1,5 +1,7 @@
 package sample.GraphInterface;
 
+import java.util.Map;
+
 public interface DirectedGraphInterface<T> {
     /*
         Task:Add new vertice with label
@@ -23,4 +25,8 @@ public interface DirectedGraphInterface<T> {
     void clear();
 
     void f(T vertexLabel);
+
+    public Map<T,VertexInterface<T>> getVerTex();
+
+
 }
