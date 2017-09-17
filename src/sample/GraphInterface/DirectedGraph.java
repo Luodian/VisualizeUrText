@@ -104,4 +104,25 @@ public class DirectedGraph<T> implements DirectedGraphInterface<T>,java.io.Seria
             VertexInterface<T> endVertex = edge.getEndVertex();
         }
     }
+
+    @Override
+    public Map<T,VertexInterface<T>> getVerTex(){
+        return VerticesMap_ObjToIter;
+    }
+
+    @Override
+    public double getEdgeWeight(T begin,T end){
+        VertexInterface<T> beginVertex = VerticesMap_ObjToIter.get(begin);
+        VertexInterface<T> endVertex = VerticesMap_ObjToIter.get(end);
+        Iterator<Vertex<T>.Edge> nextEdgeIterator = beginVertex.getNeighborIterator();
+        while (nextEdgeIterator.hasNext())
+        {
+            Vertex<T>.Edge nextEdge = nextEdgeIterator.next();
+            if (endVertex.equals(nextEdge.getEndVertex()))
+            {
+                return nextEdge.getWeight();
+            }
+        }
+        return Double.MAX_VALUE;
+    }
 }
