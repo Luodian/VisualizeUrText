@@ -109,6 +109,7 @@ public class DirectedGraph<T> implements DirectedGraphInterface<T>,java.io.Seria
     public Map<T,VertexInterface<T>> getVerTex(){
         return VerticesMap_ObjToIter;
     }
+<<<<<<< HEAD
 
     @Override
     public double getEdgeWeight(T begin,T end){
@@ -125,4 +126,6 @@ public class DirectedGraph<T> implements DirectedGraphInterface<T>,java.io.Seria
         }
         return Double.MAX_VALUE;
     }
+=======
+>>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
 }
