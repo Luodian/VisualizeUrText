@@ -8,7 +8,9 @@ import guru.nidi.graphviz.attribute.Style;
 import guru.nidi.graphviz.engine.Format;
 import guru.nidi.graphviz.engine.Graphviz;
 import guru.nidi.graphviz.model.Graph;
+import guru.nidi.graphviz.model.MutableGraph;
 import guru.nidi.graphviz.model.Node;
+import guru.nidi.graphviz.parse.Parser;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -68,7 +70,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        BorderPane border=new BorderPane();
+        BorderPane border = new BorderPane();
         border.setTop(addHBoxTop());
         border.setLeft(addGridLeft(primaryStage));
         border.setCenter(addCenter());
@@ -102,6 +104,7 @@ public class Main extends Application {
     /*添加左侧布局*/
     public GridPane addGridLeft(Stage primaryStage){
         GridPane gridLeft = new GridPane();
+        gridLeft.setMaxSize(40,40);
         gridLeft.setHgap(10);
         gridLeft.setVgap(70);
         gridLeft.setPadding(new Insets(200,20,200,50));
@@ -121,13 +124,11 @@ public class Main extends Application {
         });
         graphButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent event) {
+            public void handle(ActionEvent event)
+            {
                 //调用整体画图函数
                 showDirectedPicture("pic");
-//                wholePicture();
-//                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
-//                        "images/pic.png")));
-        }
+            }
         });
 
         gridLeft.add(openButton,1,0);
@@ -149,7 +150,8 @@ public class Main extends Application {
    }
 
    /*添加右侧布局*/
-   public GridPane addGridRight(){
+   public GridPane addGridRight()
+   {
        Button bridgeWord = new Button("查询桥接词");
        Button generateNewText = new Button("生成新文本");
        Button shortestPath = new Button("最短路径");
@@ -194,6 +196,7 @@ public class Main extends Application {
        });
 
        GridPane gridRight = new GridPane();
+       gridRight.setMaxSize(40,40);
        gridRight.setVgap(40);
        gridRight.setHgap(8);
        gridRight.setPadding(new Insets(130,30,30,10));
@@ -212,7 +215,8 @@ public class Main extends Application {
        gridRight.add(subGrid,0,3,3,4);
 
 
-       bridgeWord.setOnAction(new EventHandler<ActionEvent>() {
+       bridgeWord.setOnAction(new EventHandler<ActionEvent>()
+       {
            @Override
            public void handle(ActionEvent event) {
                bridgeWindow().show();
@@ -626,7 +630,8 @@ public class Main extends Application {
     }
     private String calcShortestPath(String word1, String word2){
         //都不是空串
-        if((!(word1.equals("")))&&((!(word2.equals(""))))){
+        if((!(word1.equals("")))&&((!(word2.equals("")))))
+        {
             Path(word1);
             if (!getPre(new ArrayList<>(),word1,word2)){
                 return "不可达";
@@ -675,18 +680,23 @@ public class Main extends Application {
             lists.clear();
         }
         String path = "";
-        for (List<String> list:totalList){
+        for (List<String> list:totalList)
+        {
             String line=new String();
             int sum=0;
             String pre = null;
             int index=list.size()-1;
-            while(index>=0){
+            while(index>=0)
+            {
                 String word=list.get(index--);
 //                list.remove(word);
-                if(pre!=null){
+                if(pre!=null)
+                {
                     sum+=dGraph.getEdgeWeight(pre,word);
                     line=line+" -> "+word;
-                }else{
+                }
+                else
+                {
                     line=word;
                 }
                 pre=word;
@@ -696,15 +706,18 @@ public class Main extends Application {
         }
         return path;
     }
-    private void Path(String sorceWord){
+    private void Path(String sorceWord)
+    {
         //初始化
         cost.clear();
         parent.clear();
         allWords=dGraph.getVerTex().keySet();
         producedWords.clear();
         Map<String,Boolean> flag= new HashMap<>();
-        for (String word:allWords) {
-            if (!word.equals(sorceWord)){
+        for (String word:allWords)
+        {
+            if (!word.equals(sorceWord))
+            {
                 int weight = getEdgeWeightInt(sorceWord,word);
                 cost.put(word,weight);
                 Stack<String> stack =new Stack<>();
@@ -784,14 +797,28 @@ public class Main extends Application {
         for (String word:dGraph.getVerTex().keySet()){
             map.put(word,node(word));
         }
+
+        for (String word1:dGraph.getVerTex().keySet())
+        {
+            for (String word2:dGraph.getVerTex().keySet())
+            {
+                if (dGraph.hasEdge(word1,word2)){
+                    Node curNode = map.get(word1);
+                    curNode=curNode.link(to(map.get(word2)).with(guru.nidi.graphviz.model.Label.of(Integer.toString(getEdgeWeightInt(word1,word2))),Color.BLACK));
+                    map.put(word1,curNode);
+                }
+            }
+        }
         int colorIndex = 0;
         Color[] colors = new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.PURPLE, Color.YELLOW,Color.GRAY};
-        for (List<String> list : lists) {
+        for (List<String> list : lists)
+        {
             String pre = null;
             int index = list.size() - 1;
 //            System.out.println(list);
             while (index >= 0) {
                 String cur = list.get(index--);
+                System.out.println(cur);
                 if (pre != null) {
                     Node preNode = map.get(pre);
                     preNode = preNode.link(to(map.get(cur)).with(guru.nidi.graphviz.model.Label.of(Integer.toString(getEdgeWeightInt(pre, cur))), colors[colorIndex]));
@@ -800,15 +827,6 @@ public class Main extends Application {
                 pre = cur;
             }
             colorIndex = (colorIndex + 1) % 6;
-        }
-        for (String word1:dGraph.getVerTex().keySet()){
-            for (String word2:dGraph.getVerTex().keySet()){
-                if (dGraph.hasEdge(word1,word2)){
-                    Node curNode = map.get(word1);
-                    curNode=curNode.link(to(map.get(word2)).with(guru.nidi.graphviz.model.Label.of(Integer.toString(getEdgeWeightInt(word1,word2))),Color.BLACK));
-                    map.put(word1,curNode);
-                }
-            }
         }
          Graph g = graph("example2").directed().with(map.values().toArray(new Node[0]));
         try {
@@ -933,6 +951,9 @@ public class Main extends Application {
 
     public static void main(String[] args) throws IOException
     {
-        launch(args);
+//        launch(args);
+        MutableGraph g = Parser.read(Main.class.getResourceAsStream("/color.dot"));
+        Graphviz.fromGraph(g).width(700).render(Format.PNG).toFile(new File("example/ex4-1.png"));
     }
+
 }
