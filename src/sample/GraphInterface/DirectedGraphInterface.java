@@ -26,13 +26,8 @@ public interface DirectedGraphInterface<T> {
 
     void f(T vertexLabel);
 
-<<<<<<< HEAD
     Map<T,VertexInterface<T>> getVerTex();
 
     double getEdgeWeight(T beginVertex,T endVertex);
-=======
-    public Map<T,VertexInterface<T>> getVerTex();
-
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
 
 }

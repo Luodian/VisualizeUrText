@@ -28,42 +28,24 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-<<<<<<< HEAD
 //import org.apache.xpath.operations.String;
 import org.apache.xpath.operations.Bool;
-=======
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
 import sample.GraphInterface.DirectedGraph;
 import sample.GraphInterface.DirectedGraphInterface;
 import sample.GraphInterface.VertexInterface;
 
 import java.awt.*;
 import java.io.*;
-<<<<<<< HEAD
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
 
 import static guru.nidi.graphviz.model.Factory.*;
 
-=======
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
 
 public class Main extends Application {
 
     private final Desktop desktop = Desktop.getDesktop();
-<<<<<<< HEAD
-=======
-    private String processLine="";                              //处理后的文本
-    private String originLine="";                               //处理前的文本
-    private  ImageView digraphImageView= new ImageView();      //中间的有向图
-    DirectedGraphInterface<String> graph = new DirectedGraph<>();
-//    private
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
 
     private DirectedGraphInterface<String> dGraph = new DirectedGraph<>();
 
@@ -140,16 +122,11 @@ public class Main extends Application {
         graphButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-<<<<<<< HEAD
                 //调用整体画图函数
-                wholePicture();
-                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
-                        "images/pic.png")));
-=======
-                //调用画图函数
-
-                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("03.jpg")));
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
+                showDirectedPicture("pic");
+//                wholePicture();
+//                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
+//                        "images/pic.png")));
         }
         });
 
@@ -289,7 +266,6 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-<<<<<<< HEAD
         String tmpStr = "";
         while (line != null) {
             originLine += line;
@@ -304,22 +280,6 @@ public class Main extends Application {
                     continue;
                 }
                 tmpStr += chr;
-=======
-        String tmpStr="";
-        while(line!=null){
-            originLine+=line;
-            char[] chars = line.toCharArray();
-            tmpStr+=' ';
-            for (char chr:chars) {
-                if(chr>='A'&&chr<='Z') {
-                    chr += ('a' - 'A');
-                }else if(chr==','||chr=='.'||chr=='?'||chr=='!'||chr==34||chr==39||chr==' '){
-                    chr=' ';
-                }else if(chr<'a'||chr>'z'){
-                    continue;
-                }
-                tmpStr+=chr;
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
             }
             try {
                 line = br.readLine();
@@ -328,7 +288,6 @@ public class Main extends Application {
             }
         }
         StringTokenizer st = new StringTokenizer(tmpStr);
-<<<<<<< HEAD
         while (st.hasMoreTokens()) {
             String tmpWord = st.nextToken();
             processLine += tmpWord;
@@ -338,18 +297,6 @@ public class Main extends Application {
         processLine = processLine.trim();
         System.out.println("processline:" + processLine);
         wordsToken(processLine);
-=======
-        while(st.hasMoreTokens()){
-            String tmpWord=st.nextToken();
-            processLine+=tmpWord;
-            processLine+=' ';
-        }
-//        processLine=processLine.substring(0,-1);
-        processLine=processLine.trim();
-        System.out.println("processline:"+processLine);
-        wordsToken(processLine);
-
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
 
         TextArea originText = new TextArea(originLine);
         originText.setEditable(true);
@@ -403,7 +350,7 @@ public class Main extends Application {
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                output.setText(bridgeWords(word1.getText(),word2.getText()));
+                output.setText(queryBridgeWords(word1.getText(),word2.getText()));
             }
         });
 
@@ -441,7 +388,7 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent event) {
 //                newText.setText("这是转换后的文字");
-                newText.setText(generateNewText(oldText.getText()));
+                    newText.setText(generateNewText(oldText.getText()));
             }
         });
 
@@ -457,11 +404,7 @@ public class Main extends Application {
 
         Stage newTextStage = new Stage();
         newTextStage.setTitle("生成新文本");
-<<<<<<< HEAD
         Scene scene = new Scene(gridPane,430,340);
-=======
-        Scene scene = new Scene(gridPane,380,220);
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
         scene.getStylesheets().add(Main.class.getResource("Main.css").toExternalForm());
         newTextStage.setScene(scene);
 
@@ -582,7 +525,7 @@ public class Main extends Application {
     }
 
     /*查询桥接词*/
-    private String bridgeWords(String word1, String word2){
+    private String queryBridgeWords(String word1, String word2){
         Map<String,VertexInterface<String>> vertexMap=dGraph.getVerTex();
         String output="";
         if (!vertexMap.containsKey(word1)||!vertexMap.containsKey(word2)){
@@ -640,7 +583,6 @@ public class Main extends Application {
         return output;
     }
 
-<<<<<<< HEAD
     /*生成新文本*/
     private String generateNewText(String originText){
         String newText ="";
@@ -712,91 +654,6 @@ public class Main extends Application {
                     }
                 }
             }
-=======
-    /*抽取单词*/
-    public void wordsToken(String processLine){
-        StringTokenizer st = new StringTokenizer(processLine);
-        String pre=null;
-        String cur=null;
-        while(st.hasMoreTokens()){
-//            System.out.println(st.nextToken());
-
-            cur=st.nextToken();
-            graph.addVertex(cur);
-            if(pre!=null){
-                graph.addEdge(pre,cur,1);
-                if(pre=="a"&&cur=="r"){
-                    System.out.println("存不存在？"+graph.hasEdge("a","r"));
-                }
-                System.out.println("这里添加边："+pre+" "+cur);
-            }
-            pre=cur;
-        }
-        System.out.println("添加了么？"+graph.hasEdge("a","r"));
-    }
-
-    /*查询桥接词*/
-    public String bridgeWords(String word1,String word2){
-        System.out.println("word1: "+word1);
-        System.out.println("word2: "+word2);
-        System.out.println("有没有边："+graph.hasEdge("a","r")+"和"+graph.hasEdge("r","b"));
-        Map<String,VertexInterface<String>> vertexMap=graph.getVerTex();
-        String output="";
-        if (!vertexMap.containsKey(word1)||!vertexMap.containsKey(word2)){
-            output="No word1 or word2 in the graph";
-        }
-        else{
-            System.out.println(graph.hasEdge("a","r"));
-            for (String tmpVertex:vertexMap.keySet()) {
-                System.out.println("当前点是："+tmpVertex);
-                if(tmpVertex.equals(word1)||tmpVertex.equals(word2)){
-                    continue;
-                }
-                else{
-                    if(graph.hasEdge(word1,tmpVertex)&&graph.hasEdge(tmpVertex,word2)){
-                        output+=tmpVertex;
-                        output+=" ";
-                        System.out.println("找到桥街点："+tmpVertex);
-                    }
-                }
-            }
-            if(output.equals("")){
-                output="No bridge words from word1 to word2";
-            }else{
-                List<String> usefulWords= new ArrayList<>();
-                StringTokenizer st=new StringTokenizer(output);
-                while (st.hasMoreTokens()){
-                    usefulWords.add(st.nextToken());
-                }
-                System.out.println("usefulWords: "+usefulWords);
-                System.out.println("size: "+usefulWords.size());
-
-                if(usefulWords.size()==1){
-                    output="The bridge word from word1 to word2 is: ";
-                    output+=usefulWords.get(0);
-                    output+=".";
-                }else {
-                    output="The bridge words from word1 to word2 are:";
-                    int size = usefulWords.size();
-                    int outNum=0;
-                    for (String word:usefulWords) {
-                        outNum++;
-                        if(outNum!=size){
-                            output+=" ";
-                            output+=word;
-                            output+=',';
-                        }else{
-                            output+=" and ";
-                            output+=word;
-                            output+='.';
-                        }
-                    }
-                }
-            }
-        }
-        return output;
-    }
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
 
             List<List<String>> lists=new ArrayList<>();
             String cur=null;
@@ -910,7 +767,6 @@ public class Main extends Application {
         return rst;
     }
 
-<<<<<<< HEAD
     /*特殊的加法，一个加数为Integer.MAX_VALUE时，和为Integer.MAX_VALUE*/
     private int formatPlus(int num1,int num2){
         if(num1==Integer.MAX_VALUE||num2==Integer.MAX_VALUE){
@@ -919,16 +775,6 @@ public class Main extends Application {
             return num1+num2;
         }
     }
-=======
-    public static void main(String[] args) {
-        launch(args);
-//        DirectedGraphInterface<String> graph = new DirectedGraph<>();
-//        graph.addVertex("a");
-//        graph.addVertex("b");
-//        graph.addEdge("a","b",1);
-//        System.out.println(graph.hasEdge("a","b"));
-//        System.out.println(graph.hasEdge("a","c"));
->>>>>>> 04f905a030f77f3b70f341cf59ec566a09af1b12
 
     /*画图函数*/
     //强调局部路径作图的函数
@@ -974,7 +820,7 @@ public class Main extends Application {
     }
 
     //作出整个图片的函数
-    private void wholePicture(){
+    private void showDirectedPicture(String name){
         Map<String,Node> map=new HashMap<>();
         for (String word:dGraph.getVerTex().keySet()){
             map.put(word,node(word));
@@ -995,6 +841,9 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
+                "images/"+name+".png")));
     }
 
     private boolean hasSameEdge(List<String> list,String word1,String word2){
