@@ -1,5 +1,9 @@
 .root {
-    -fx-background-image: url("/sample/resources/images/background.jpg");
+    -fx-background-image: url("/sample/resources/images/c.svg");
+    -fx-background-color:transparent;
+    -fx-background-size: 1650 1500;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
 }
 .label {
     -fx-font-size: 12px;
@@ -19,4 +23,9 @@
 }
 .button:hover {
     -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+#middleButton {
+    -fx-background-color: transparent;
+    -fx-border-radius: 0;
+    -fx-background-radius:0;
 }

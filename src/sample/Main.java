@@ -1,15 +1,16 @@
 package sample;
 
-import com.kitfox.svg.Text;
-import guru.nidi.codeassert.config.In;
-import guru.nidi.graphviz.attribute.Color;
-import guru.nidi.graphviz.attribute.Shape;
-import guru.nidi.graphviz.attribute.Style;
+//import com.kitfox.svg.Text;
+//import guru.nidi.codeassert.config.In;
+//import guru.nidi.graphviz.attribute.Color;
+//import guru.nidi.graphviz.attribute.Shape;
+//import guru.nidi.graphviz.attribute.Style;
+import de.codecentric.centerdevice.javafxsvg.SvgImageLoaderFactory;
 import guru.nidi.graphviz.engine.Format;
 import guru.nidi.graphviz.engine.Graphviz;
-import guru.nidi.graphviz.model.Graph;
+//import guru.nidi.graphviz.model.Graph;
 import guru.nidi.graphviz.model.MutableGraph;
-import guru.nidi.graphviz.model.Node;
+//import guru.nidi.graphviz.model.Node;
 import guru.nidi.graphviz.parse.Parser;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -23,68 +24,96 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 //import org.apache.xpath.operations.String;
-import org.apache.xpath.operations.Bool;
+//import org.apache.xpath.operations.Bool;
+import javafx.stage.StageStyle;
 import sample.GraphInterface.DirectedGraph;
 import sample.GraphInterface.DirectedGraphInterface;
 import sample.GraphInterface.VertexInterface;
 
 import java.awt.*;
 import java.io.*;
-import java.lang.reflect.Array;
+//import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
 
-import static guru.nidi.graphviz.model.Factory.*;
+//import static guru.nidi.graphviz.model.Factory.*;
 
 
 public class Main extends Application {
 
-    private final Desktop desktop = Desktop.getDesktop();
+    private DirectedGraphInterface<String> dGraph = new DirectedGraph<>();  //有向图
 
-    private DirectedGraphInterface<String> dGraph = new DirectedGraph<>();
+    private int indexEnd=0;                                            //要切换的路线的最终word的id
+    private String paths;                                               //最短路径的表示
 
-//    private Map<String,String> endFromStart = new HashMap<>();             //存放终点和起点
-    private int indexMap=0;
-    String paths;
+    private List<String> dotLines = new ArrayList<>();                 //dot命令
 
     private String processLine="";                                    //处理后的文本
     private String originLine="";                                     //处理前的文本
-    private  ImageView digraphImageView= new ImageView();                      //中间的有向图
-    private Map<String,Integer> cost = new HashMap<>();
-    private Map<String, Stack<String>> parent= new HashMap<>();    //这里父节点使用Stack，这样可以找多个路径
-    private List<List<String>> totalList=new ArrayList<>();
-    private Set<String> allWords = new HashSet<>(dGraph.getVerTex().keySet());
-    private Set<String> producedWords = new HashSet<>();
 
+//    private  ImageView digraphImageView= new ImageView();            //窗口中间的图片
+
+    private Map<String, Stack<String>> parent= new HashMap<>();         //记录父节点，使用Stack，这样可以找多个路径
+    private List<List<String>> totalList=new ArrayList<>();             //逆向路径总表
+
+    private String picName;
+
+    private Button middleButton = new Button();                   //中间按钮
     private List<String> randomWalkList = new ArrayList<>();        //随机游走记录路径的链表
-    private boolean stopFlag=true;
+    private boolean stopFlag=true;                                  //停止随机游走的标志
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
 
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        SvgImageLoaderFactory.install();
+        Button btn = new Button("test");
+        btn.setLayoutX(0);
+        btn.setLayoutY(0);
         BorderPane border = new BorderPane();
-        border.setTop(addHBoxTop());
+//        border.setTop(addHBoxTop());
         border.setLeft(addGridLeft(primaryStage));
-        border.setCenter(addCenter());
+//        border.setCenter(addCenter());
+        picName = "test.jpg";
+        ImageView imageView = new ImageView("/sample/resources/images/"+picName);
+        imageView.setFitHeight(600);
+        imageView.setFitWidth(830);
+        middleButton.setGraphic(imageView);
+        middleButton.setId("middleButton");
+//        middleButton.setMaxSize(100,50);
+        middleButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    Desktop.getDesktop().open(new File("out/production/" +
+                            "VisualizeUrText/sample/resources/images/"+picName));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
         border.setRight(addGridRight());
+        StackPane middleGrid = new StackPane();
+        middleGrid.getChildren().add(middleButton);
+        middleGrid.setPadding(new Insets(0,0,180,0));
+        border.setCenter(middleGrid);
 
         Rectangle2D currentScreenBounds = Screen.getPrimary().getVisualBounds();
 
         double screenHeight = currentScreenBounds.getHeight();
         double screenWidth = currentScreenBounds.getWidth();
 
-        System.out.println(screenHeight + "+" + screenWidth);
-
-        Scene scene = new Scene(border, screenWidth - 200, screenHeight - 100);
+//        Scene scene = new Scene(border, screenWidth - 200, screenHeight - 100);
+        Scene scene = new Scene(border,1700,1300);
         scene.getStylesheets().add(Main.class.getResource("Main.css").toExternalForm());
+
+        scene.setFill(null);
 
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(scene);
@@ -93,21 +122,21 @@ public class Main extends Application {
     }
 
    /*添加顶部栏*/
-    public HBox addHBoxTop(){
-        HBox hbox = new HBox();
-        hbox.setPadding(new Insets(15,12,15,12));
-        hbox.setStyle("-fx-background-color: #336699");
-
-        return hbox;
-    }
+//   private HBox addHBoxTop(){
+//        HBox hbox = new HBox();
+//        hbox.setPadding(new Insets(15,12,15,12));
+//        hbox.setStyle("-fx-background-color: #336699");
+//
+//        return hbox;
+//    }
 
     /*添加左侧布局*/
-    public GridPane addGridLeft(Stage primaryStage){
+    private GridPane addGridLeft(Stage primaryStage){
         GridPane gridLeft = new GridPane();
-        gridLeft.setMaxSize(40,40);
+//        gridLeft.setMaxSize(40,40);
         gridLeft.setHgap(10);
         gridLeft.setVgap(70);
-        gridLeft.setPadding(new Insets(200,20,200,50));
+        gridLeft.setPadding(new Insets(450,0,200,190));
 
         final Button openButton = new Button("选择文件");
         final Button graphButton = new Button("绘制图形");
@@ -127,7 +156,14 @@ public class Main extends Application {
             public void handle(ActionEvent event)
             {
                 //调用整体画图函数
+                picName = "pic.png";
                 showDirectedPicture("pic");
+                ImageView imageView = new ImageView("/sample/resources/images/"+picName);
+                imageView.setFitHeight(600);
+                imageView.setFitWidth(830);
+                middleButton.setGraphic(imageView);
+//                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
+//                        "images/"+"pic"+".png")));
             }
         });
 
@@ -137,20 +173,20 @@ public class Main extends Application {
     }
 
     /*添加中间布局*/
-   public StackPane addCenter(){
-       StackPane middleGraph = new StackPane();
-       Image digraphImage = new Image(Main.class.getResourceAsStream("resources/images/test.jpg"));
-       digraphImageView.setImage(digraphImage);
-       digraphImageView.setFitWidth(750);
-       digraphImageView.setFitHeight(550);
-       digraphImageView.setSmooth(true);
-       middleGraph.setPadding(new Insets(40,0,40,0));
-       middleGraph.getChildren().add(digraphImageView);
-       return middleGraph;
-   }
+//    private StackPane addCenter(){
+//       StackPane middleGraph = new StackPane();
+//       Image digraphImage = new Image(Main.class.getResourceAsStream("resources/images/test.jpg"));
+//       digraphImageView.setImage(digraphImage);
+//       digraphImageView.setFitWidth(820);
+//       digraphImageView.setFitHeight(550);
+//       digraphImageView.setSmooth(true);
+//       middleGraph.setPadding(new Insets(40,0,210,0));
+//       middleGraph.getChildren().add(digraphImageView);
+//       return middleGraph;
+//   }
 
    /*添加右侧布局*/
-   public GridPane addGridRight()
+   private GridPane addGridRight()
    {
        Button bridgeWord = new Button("查询桥接词");
        Button generateNewText = new Button("生成新文本");
@@ -161,7 +197,7 @@ public class Main extends Application {
        Button nextStep = new Button("下一步");
        Button stop = new Button("终止");
        TextArea text = new TextArea();
-       text.setMaxSize(300,500);
+       text.setMaxSize(180,130);
 
        start.setOnAction(new EventHandler<ActionEvent>() {
            @Override
@@ -169,37 +205,58 @@ public class Main extends Application {
                stopFlag=false;
                randomWalkList.clear();
                text.setText(randomWalk()+"\n");
-               digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
-                       "images/"+randomWalkList.get(0)+"to"+randomWalkList.get(randomWalkList.size()-1)+
-                       ".png")));
+               picName = randomWalkList.get(0)+"to"+randomWalkList.get(randomWalkList.size()-1)+ ".png";
+               ImageView imageView = new ImageView("/sample/resources/images/"+picName);
+               imageView.setFitHeight(600);
+               imageView.setFitWidth(830);
+               middleButton.setGraphic(imageView);
+//               digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
+//                       "images/"+randomWalkList.get(0)+"to"+randomWalkList.get(randomWalkList.size()-1)+
+//                       ".png")));
            }
        });
        nextStep.setOnAction(new EventHandler<ActionEvent>() {
            @Override
            public void handle(ActionEvent event) {
                if (stopFlag){
+                   try {
+                       writeToRandomText(text.getText());
+                   } catch (IOException e) {
+                       e.printStackTrace();
+                   }
                    text.setText(text.getText()+"已经停止了\n");
                } else {
                    text.setText(text.getText()+randomWalk()+"\n");
                }
-               digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
-                       "images/"+randomWalkList.get(0)+"to"+randomWalkList.get(randomWalkList.size()-1)+
-                       ".png")));
+               picName = randomWalkList.get(0)+"to"+randomWalkList.get(randomWalkList.size()-1)+ ".png";
+               ImageView imageView = new ImageView("/sample/resources/images/"+picName);
+               imageView.setFitHeight(600);
+               imageView.setFitWidth(830);
+               middleButton.setGraphic(imageView);
+
+//               digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
+//                       "images/"+randomWalkList.get(0)+"to"+randomWalkList.get(randomWalkList.size()-1)+
+//                       ".png")));
            }
        });
        stop.setOnAction(new EventHandler<ActionEvent>() {
            @Override
            public void handle(ActionEvent event) {
                stopFlag=true;
+               try {
+                   writeToRandomText(text.getText());
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
                text.setText(text.getText()+"已经停止了\n");
            }
        });
 
        GridPane gridRight = new GridPane();
-       gridRight.setMaxSize(40,40);
-       gridRight.setVgap(40);
-       gridRight.setHgap(8);
-       gridRight.setPadding(new Insets(130,30,30,10));
+//       gridRight.setMaxSize(40,40);
+       gridRight.setVgap(10);
+       gridRight.setHgap(1);
+       gridRight.setPadding(new Insets(500,70,30,0));
        gridRight.add(bridgeWord,1,0);
        gridRight.add(generateNewText,2,1);
        gridRight.add(shortestPath,0,1);
@@ -246,15 +303,24 @@ public class Main extends Application {
                    subGrid.setVisible(true);
                    randomWalk.setText("关闭");
                }
-
            }
        });
-
        return gridRight;
    }
 
     /*原始文档转换窗口*/
-    public Stage openWindow(File file) {
+    private Stage openWindow(File file) {
+
+        dGraph.clear();
+        indexEnd=0;
+        paths = "";
+        dotLines.clear();
+        processLine="";
+        originLine="";
+        parent.clear();
+        totalList.clear();
+        randomWalkList.clear();
+        stopFlag=true;
 
         InputStreamReader reader = null;
         try {
@@ -297,10 +363,8 @@ public class Main extends Application {
             processLine += tmpWord;
             processLine += ' ';
         }
-//        processLine=processLine.substring(0,-1);
         processLine = processLine.trim();
-        System.out.println("processline:" + processLine);
-        wordsToken(processLine);
+        wordsToken(processLine);            //抽取单词
 
         TextArea originText = new TextArea(originLine);
         originText.setEditable(true);
@@ -308,7 +372,8 @@ public class Main extends Application {
         originText.setMaxWidth(150);
         originText.setMaxHeight(150);
 
-        Image image = new Image("http://2.pic.9ht.com/up/2015-9/201591815454.jpg");
+        Image image = new Image(Main.class.getResourceAsStream("/sample/resources/" +
+                "images/arrow.png"));
         ImageView imageView = new ImageView(image);
         imageView.setFitHeight(80);
         imageView.setFitWidth(80);
@@ -337,7 +402,7 @@ public class Main extends Application {
     }
 
     /*查询桥接词窗口*/
-    public Stage bridgeWindow(){
+    private Stage bridgeWindow(){
         Label word1Label = new Label("Word 1");
         Label word2Label = new Label("Word 2");
         Label outputLabel = new Label("Output");
@@ -380,7 +445,7 @@ public class Main extends Application {
     }
 
     /*生成新文本窗口*/
-    public Stage newTextWindow(){
+    private Stage newTextWindow(){
         Label oldTextLabel = new Label("请输入要转换的文本");
         Label newTextLabel = new Label("新文本");
         TextArea oldText = new TextArea();
@@ -391,7 +456,6 @@ public class Main extends Application {
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-//                newText.setText("这是转换后的文字");
                     newText.setText(generateNewText(oldText.getText()));
             }
         });
@@ -417,7 +481,7 @@ public class Main extends Application {
     }
 
     /*最短路径窗口*/
-    public Stage shortestPathWindow(){
+    private Stage shortestPathWindow(){
         Label word1Label = new Label("Word 1");
         Label word2Label = new Label("Word 2");
         Label pathLabel = new Label("路径");
@@ -430,25 +494,24 @@ public class Main extends Application {
         path.setMaxSize(350,300);
 
         Button buttonSearch = new Button("查询");
-//        final String[] str = new String[1];
-
         buttonSearch.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-//                path.setText("这就是查询到的最短路径");
                 paths = calcShortestPath(word1.getText(),word2.getText());
                 path.setText(paths);
                 totalList.clear();
-                indexMap=0;
+                indexEnd=0;
             }
         });
-
 
         Button buttonNextPic = new Button("切换图片");
         buttonNextPic.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-//                String[] ends = endFromStart.keySet().toArray(new String[0]);
+                if (paths.equals("不可达")||paths.equals("至少有一个word不存在")||paths.equals("该点到其他点全都不可达")||
+                        paths.equals("无输入")||paths.equals("该单词不存在")){
+                    return;
+                }
                 String[] lines=paths.split("\n");
                 List<String> ends = new ArrayList<>();
                 for (String line:lines){
@@ -463,8 +526,24 @@ public class Main extends Application {
                         pre=cur;
                     }
                 }
-                System.out.println(ends);
-                String end = ends.get(indexMap);
+                String end = ends.get(indexEnd);
+                boolean allTheSame = true;          //表示所有结束的单词都相同
+                String pre=null;
+                for (String cur:ends){
+                    if (pre!=null&&!pre.equals(cur)){
+                        allTheSame=false;
+                        break;
+                    }
+                    pre=cur;
+                }
+                if (!allTheSame){
+                    indexEnd=(indexEnd+1)%ends.size();
+                    String next = ends.get(indexEnd);
+                    while(next.equals(end)){
+                        indexEnd=(indexEnd+1)%ends.size();
+                        next = ends.get(indexEnd);
+                    }
+                }
                 String start;
                 if (!word1.getText().equals("")){
                     start=word1.getText();
@@ -473,11 +552,14 @@ public class Main extends Application {
                 }else {
                     return; //没有输入
                 }
-//                String start = endFromStart.get(end);
-                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
-                        "images/"+start+"to"+end+".png")));
-                indexMap=(indexMap+1)%ends.size();
-                System.out.println(indexMap);
+                picName = start+"to"+end+".png";
+                ImageView imageView = new ImageView("/sample/resources/images/"+picName);
+                imageView.setFitHeight(600);
+                imageView.setFitWidth(830);
+                middleButton.setGraphic(imageView);
+
+//                digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
+//                        "images/"+start+"to"+end+".png")));
             }
         });
 
@@ -491,7 +573,6 @@ public class Main extends Application {
         gridPane.add(word1,1,0);
         gridPane.add(word2,1,1);
         gridPane.add(path,1,2);
-//        gridPane.add(button,1,3);
         GridPane sonGridPane = new GridPane();
         sonGridPane.setVgap(20);
         sonGridPane.setHgap(20);
@@ -509,7 +590,6 @@ public class Main extends Application {
         return shortestPathStage;
     }
 
-
     /*抽取单词*/
     private void wordsToken(String processLine){
         StringTokenizer st = new StringTokenizer(processLine);
@@ -522,7 +602,6 @@ public class Main extends Application {
             }
             if(pre!=null){
                 dGraph.addEdge(pre,cur,1);
-                System.out.println("这里添加边："+pre+" "+cur);
             }
             pre=cur;
         }
@@ -531,68 +610,62 @@ public class Main extends Application {
     /*查询桥接词*/
     private String queryBridgeWords(String word1, String word2){
         Map<String,VertexInterface<String>> vertexMap=dGraph.getVerTex();
-        String output="";
+        StringBuilder output= new StringBuilder();
         if (!vertexMap.containsKey(word1)||!vertexMap.containsKey(word2)){
-            output="No word1 or word2 in the graph";
+            output = new StringBuilder("No word1 or word2 in the graph");
         }
         else{
-            System.out.println(dGraph.hasEdge("a","r"));
             for (String tmpVertex:vertexMap.keySet()) {
-                System.out.println("当前点是："+tmpVertex);
                 if(tmpVertex.equals(word1)||tmpVertex.equals(word2)){
                     continue;
                 }
                 else{
                     if(dGraph.hasEdge(word1,tmpVertex)&&dGraph.hasEdge(tmpVertex,word2)){
-                        output+=tmpVertex;
-                        output+=" ";
-                        System.out.println("找到桥街点："+tmpVertex);
+                        output.append(tmpVertex);
+                        output.append(" ");
                     }
                 }
             }
-            if(output.equals("")){
-                output="No bridge words from word1 to word2";
+            if(output.toString().equals("")){
+                output = new StringBuilder("No bridge words from word1 to word2");
             }else{
                 List<String> usefulWords= new ArrayList<>();
-                StringTokenizer st=new StringTokenizer(output);
+                StringTokenizer st=new StringTokenizer(output.toString());
                 while (st.hasMoreTokens()){
                     usefulWords.add(st.nextToken());
                 }
-                System.out.println("usefulWords: "+usefulWords);
-                System.out.println("size: "+usefulWords.size());
-
                 if(usefulWords.size()==1){
-                    output="The bridge word from word1 to word2 is: ";
-                    output+=usefulWords.get(0);
-                    output+=".";
+                    output = new StringBuilder("The bridge word from word1 to word2 is: ");
+                    output.append(usefulWords.get(0));
+                    output.append(".");
                 }else {
-                    output="The bridge words from word1 to word2 are:";
+                    output = new StringBuilder("The bridge words from word1 to word2 are:");
                     int size = usefulWords.size();
                     int outNum=0;
                     for (String word:usefulWords) {
                         outNum++;
                         if(outNum!=size){
-                            output+=" ";
-                            output+=word;
-                            output+=',';
+                            output.append(" ");
+                            output.append(word);
+                            output.append(',');
                         }else{
-                            output+=" and ";
-                            output+=word;
-                            output+='.';
+                            output.append(" and ");
+                            output.append(word);
+                            output.append('.');
                         }
                     }
                 }
             }
         }
-        return output;
+        return output.toString();
     }
 
     /*生成新文本*/
     private String generateNewText(String originText){
-        String newText ="";
+        StringBuilder newText = new StringBuilder();
         Map<String,VertexInterface<String>> vertexMap=dGraph.getVerTex();
         StringTokenizer st = new StringTokenizer(originText);
-        String cur=null;
+        String cur;
         String pre=null;
         while(st.hasMoreTokens()){
             cur=st.nextToken();
@@ -605,33 +678,38 @@ public class Main extends Application {
                         }
                     }
                     if (bridgeWords.size()==0){
-                        newText = newText + " "+cur;
+                        newText.append(" ").append(cur);
                     }else{
                         String[] bridgeWordsArray= (String[]) bridgeWords.toArray(new String[bridgeWords.size()]);
-                        newText =  newText+" "+bridgeWordsArray[(int)(Math.random()*bridgeWordsArray.length)]+" "+cur;
+                        newText.append(" ").append(bridgeWordsArray[(int) (Math.random() * bridgeWordsArray.length)]).append(" ").append(cur);
                     }
                 }else {
-                    newText=newText+" "+cur;
+                    newText.append(" ").append(cur);
                 }
             }else {
-                newText=newText+cur;
+                newText.append(cur);
             }
             pre=cur;
         }
-        return newText;
+        return newText.toString();
     }
 
-    public int getEdgeWeightInt(String word1,String word2){
+    /*将double类型的权值化为int类型*/
+    private int getEdgeWeightInt(String word1, String word2){
         if(dGraph.getEdgeWeight(word1,word2)==Double.MAX_VALUE){
             return Integer.MAX_VALUE;
-//            return 10000;           //这里不使用Integer.MAX_VALUE,防止数据范围
         }else
             return (int) dGraph.getEdgeWeight(word1,word2);
     }
+
+    /*计算最短路径*/
     private String calcShortestPath(String word1, String word2){
         //都不是空串
         if((!(word1.equals("")))&&((!(word2.equals("")))))
         {
+            if (!dGraph.getVerTex().keySet().contains(word1)||!dGraph.getVerTex().keySet().contains(word2)){
+                return "至少有一个word不存在";
+            }
             Path(word1);
             if (!getPre(new ArrayList<>(),word1,word2)){
                 return "不可达";
@@ -650,6 +728,9 @@ public class Main extends Application {
             }else if((!(word1.equals("")))&&(word2.equals(""))){
                 sourceWord=word1;
             }
+            if (!dGraph.getVerTex().keySet().contains(sourceWord)){
+                return "该单词不存在";
+            }
             Path(sourceWord);
             boolean allUnreachable=true;
             for (String word:dGraph.getVerTex().keySet()) {
@@ -658,6 +739,9 @@ public class Main extends Application {
                         allUnreachable=false;           //不可达
                     }
                 }
+            }
+            if (allUnreachable){
+                return "该点到其他点全都不可达";
             }
 
             List<List<String>> lists=new ArrayList<>();
@@ -668,14 +752,12 @@ public class Main extends Application {
                 if(pre==null||pre.equals(cur)){
                     lists.add(list);
                 }else{
-                    System.out.println(lists);
                     localPicture(sourceWord,pre,lists);
                     lists.clear();
                     lists.add(list);
                 }
                 pre=cur;
             }
-            System.out.println(lists);
             localPicture(sourceWord,pre,lists);
             lists.clear();
         }
@@ -689,7 +771,6 @@ public class Main extends Application {
             while(index>=0)
             {
                 String word=list.get(index--);
-//                list.remove(word);
                 if(pre!=null)
                 {
                     sum+=dGraph.getEdgeWeight(pre,word);
@@ -709,7 +790,10 @@ public class Main extends Application {
     private void Path(String sorceWord)
     {
         //初始化
-        cost.clear();
+//        cost.clear();
+        Map<String,Integer> cost = new HashMap<>();
+        Set<String> allWords = new HashSet<>(dGraph.getVerTex().keySet());
+        Set<String> producedWords = new HashSet<>();
         parent.clear();
         allWords=dGraph.getVerTex().keySet();
         producedWords.clear();
@@ -750,7 +834,6 @@ public class Main extends Application {
             }
             producedWords.add(curStr);
             flag.put(curStr,true);
-//            allWords.remove(curStr);
             for (String word:allWords) {
                 if(!flag.get(word)){
                     if (formatPlus(curCost,getEdgeWeightInt(curStr,word))<cost.get(word)){
@@ -792,76 +875,55 @@ public class Main extends Application {
     /*画图函数*/
     //强调局部路径作图的函数
     private void localPicture(String start,String end,List<List<String>> lists) {
-//        endFromStart.put(end,start);
-        Map<String,Node> map=new HashMap<>();
-        for (String word:dGraph.getVerTex().keySet()){
-            map.put(word,node(word));
-        }
-
-        for (String word1:dGraph.getVerTex().keySet())
-        {
-            for (String word2:dGraph.getVerTex().keySet())
-            {
-                if (dGraph.hasEdge(word1,word2)){
-                    Node curNode = map.get(word1);
-                    curNode=curNode.link(to(map.get(word2)).with(guru.nidi.graphviz.model.Label.of(Integer.toString(getEdgeWeightInt(word1,word2))),Color.BLACK));
-                    map.put(word1,curNode);
+            int colorIndex = 0;
+            String[] colors = new String[]{"RED", "GREEN", "BLUE", "PURPLE", "YELLOW", "GRAY"};
+            for (List<String> list : lists) {
+                String pre = null;
+                int index = list.size() - 1;
+                while (index >= 0) {
+                    String cur = list.get(index--);
+                    if (pre != null) {
+                        String line = pre + "->" + cur + "[label = " + String.valueOf(getEdgeWeightInt(pre, cur)) + " ][color = " +
+                                colors[colorIndex] + " ]\n";
+                        dotLines.add(line);
+                    }
+                    pre = cur;
                 }
+                colorIndex = (colorIndex + 1) % 6;
             }
+            showDirectedPicture(start + "to" + end);
         }
-        int colorIndex = 0;
-        Color[] colors = new Color[]{Color.RED, Color.GREEN, Color.BLUE, Color.PURPLE, Color.YELLOW,Color.GRAY};
-        for (List<String> list : lists)
-        {
-            String pre = null;
-            int index = list.size() - 1;
-//            System.out.println(list);
-            while (index >= 0) {
-                String cur = list.get(index--);
-                System.out.println(cur);
-                if (pre != null) {
-                    Node preNode = map.get(pre);
-                    preNode = preNode.link(to(map.get(cur)).with(guru.nidi.graphviz.model.Label.of(Integer.toString(getEdgeWeightInt(pre, cur))), colors[colorIndex]));
-                    map.put(pre, preNode);
-                }
-                pre = cur;
-            }
-            colorIndex = (colorIndex + 1) % 6;
-        }
-         Graph g = graph("example2").directed().with(map.values().toArray(new Node[0]));
-        try {
-            Graphviz.fromGraph(g).width(650).render(Format.PNG).toFile(new File("out/production/Visual" +
-                    "izeUrText/sample/resources/images/"+start+"to"+end+".png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     //作出整个图片的函数
     private void showDirectedPicture(String name){
-        Map<String,Node> map=new HashMap<>();
-        for (String word:dGraph.getVerTex().keySet()){
-            map.put(word,node(word));
-        }
         for (String word1:dGraph.getVerTex().keySet()){
             for (String word2:dGraph.getVerTex().keySet()){
                 if (dGraph.hasEdge(word1,word2)){
-                    Node curNode = map.get(word1);
-                    curNode=curNode.link(to(map.get(word2)).with(guru.nidi.graphviz.model.Label.of(Integer.toString(getEdgeWeightInt(word1,word2)))));
-                    map.put(word1,curNode);
+                    String line = word1+"->"+word2+"[label = "+String.valueOf(getEdgeWeightInt(word1,word2))+" ]" +
+                            "[ color = BLACK ]\n";
+                    dotLines.add(line);
                 }
             }
         }
-        Graph g = graph("example2").directed().with(map.values().toArray(new Node[0]));
         try {
-            Graphviz.fromGraph(g).width(650).render(Format.PNG).toFile(new File("out/production/Visual" +
-                    "izeUrText/sample/resources/images/pic.png"));
+            FileWriter fileOut = new FileWriter("out/production/VisualizeUrText/sample/a.dot");
+            fileOut.write("digraph {\n");
+            for (String line:dotLines){
+                fileOut.write(line);
+            }
+            fileOut.write("}");
+            fileOut.flush();
+            fileOut.close();
+            MutableGraph gr = Parser.read(Main.class.getResourceAsStream("/sample/a.dot"));
+            Graphviz.fromGraph(gr).width(1000).render(Format.PNG).toFile(new File("out/production/" +
+                    "VisualizeUrText/sample/resources/images/"+name+".png"));
+            dotLines.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
+//        digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
+//                "images/"+name+".png")));
 
-        digraphImageView.setImage(new Image(Main.class.getResourceAsStream("/sample/resources/" +
-                "images/"+name+".png")));
     }
 
     private boolean hasSameEdge(List<String> list,String word1,String word2){
@@ -898,39 +960,18 @@ public class Main extends Application {
             sameEdge=true;
         }
         randomWalkList.add(newStr);
-        Map<String,Node> map = new HashMap<>();
-        for (String word:dGraph.getVerTex().keySet()){
-            map.put(word,node(word));
-        }
         String pre=null;
         String cur=null;
         for (String word:randomWalkList){
             cur = word;
             if (pre!=null){
-                Node preNode = map.get(pre);
-                preNode = preNode.link(to(map.get(cur)).with(guru.nidi.graphviz.model.Label.of(Integer.toString(getEdgeWeightInt(pre, cur))), Color.RED3));
-                map.put(pre, preNode);
+                String line=pre+"->"+cur+"[label = "+String.valueOf(getEdgeWeightInt(pre,cur))+" ][color = GREEN]\n";
+                dotLines.add(line);
             }
             pre=cur;
         }
-        for (String word1:dGraph.getVerTex().keySet()){
-            for (String word2:dGraph.getVerTex().keySet()){
-                if (dGraph.hasEdge(word1,word2)){
-                    Node curNode = map.get(word1);
-                    curNode=curNode.link(to(map.get(word2)).with(guru.nidi.graphviz.model.Label.of(Integer.toString(getEdgeWeightInt(word1,word2))),Color.BLACK));
-                    map.put(word1,curNode);
-                }
-            }
-        }
-        Graph g = graph("example2").directed().with(map.values().toArray(new Node[0]));
-        try {
-            Graphviz.fromGraph(g).width(650).render(Format.PNG).toFile(new File("out/production/Visual" +
-                    "izeUrText/sample/resources/images/"+randomWalkList.get(0)+"to"
-                    +randomWalkList.get(randomWalkList.size()-1)+".png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        showDirectedPicture(randomWalkList.get(0)+"to"
+                +randomWalkList.get(randomWalkList.size()-1));
         StringBuilder path = new StringBuilder();
         pre=null;
         for (String word:randomWalkList){
@@ -949,11 +990,34 @@ public class Main extends Application {
         return str;
     }
 
+    /*将路径写入文件*/
+    private void writeToRandomText(String content) throws IOException {
+        FileWriter fileWriter = new FileWriter("随机游走路径.txt",true);
+        String[] strings=content.split("\n");
+        String out =strings[strings.length-1]+"\n";
+        fileWriter.write(out);
+        fileWriter.flush();
+        fileWriter.close();
+    }
+
     public static void main(String[] args) throws IOException
     {
-//        launch(args);
-        MutableGraph g = Parser.read(Main.class.getResourceAsStream("/color.dot"));
-        Graphviz.fromGraph(g).width(700).render(Format.PNG).toFile(new File("example/ex4-1.png"));
+//        String str = "hello";
+//        FileWriter fileWriter;
+//        try {
+//            fileWriter = new FileWriter("E:/abcdef.txt");
+//            fileWriter.write(str);
+//            fileWriter.flush();
+//            fileWriter.close();
+//        } catch (IOException e){
+//            e.printStackTrace();
+//        }
+        launch(args);
+//        System.out.println(Main.class.getResource("/"));
+//        MutableGraph g = Parser.read(Main.class.getResourceAsStream("/sample/a.dot"));
+//        Graphviz.fromGraph(g).width(700).render(Format.PNG).toFile(new File("example/dot.png"));
     }
 
 }
+
+

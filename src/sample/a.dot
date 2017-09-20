@@ -1,7 +1,0 @@
-digraph {
-a->b[label = 1]
-b->c
-c->d[label = 1]
-d->e
-c->d[color = RED][label = 1]
-}

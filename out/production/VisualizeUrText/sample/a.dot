@@ -1,3 +1,16 @@
-graph {
-    a->b->c->d->e;
+digraph {
+and->new[label = 1 ][color = RED ]
+new->worlds[label = 1 ][color = RED ]
+to->explore[label = 1 ][ color = BLACK ]
+to->seek[label = 1 ][ color = BLACK ]
+explore->strange[label = 1 ][ color = BLACK ]
+strange->new[label = 1 ][ color = BLACK ]
+new->worlds[label = 1 ][ color = BLACK ]
+new->life[label = 1 ][ color = BLACK ]
+new->civilizations[label = 1 ][ color = BLACK ]
+worlds->to[label = 1 ][ color = BLACK ]
+seek->out[label = 1 ][ color = BLACK ]
+out->new[label = 1 ][ color = BLACK ]
+life->and[label = 1 ][ color = BLACK ]
+and->new[label = 1 ][ color = BLACK ]
 }
