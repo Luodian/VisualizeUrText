@@ -29,3 +29,8 @@
     -fx-border-radius: 0;
     -fx-background-radius:0;
 }
+#tiplabel{
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

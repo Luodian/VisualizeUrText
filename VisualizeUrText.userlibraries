@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="first_maven_jar">
+    <archive path="E:/GitHubProjects/VisualizeUrText/first_maven_jar/first_maven.jar" />
+  </library>
+  <library name="javafxsvg_jar">
+    <archive path="E:/GitHubProjects/VisualizeUrText/javafxsvg_jar/javafxsvg.jar" />
+  </library>
+</eclipse-userlibraries>
+

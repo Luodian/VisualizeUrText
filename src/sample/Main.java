@@ -18,6 +18,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -67,6 +68,8 @@ public class Main extends Application {
     private List<String> randomWalkList = new ArrayList<>();        //随机游走记录路径的链表
     private boolean stopFlag=true;                                  //停止随机游走的标志
 
+    private Alert alert = new Alert(Alert.AlertType.WARNING,"请您先读取文件哦!");
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -115,6 +118,15 @@ public class Main extends Application {
 
         scene.setFill(null);
 
+        alert.setTitle("请先读取文件哦！");
+        Button alertBtn = new Button();
+        alertBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                alert.showAndWait();
+            }
+        });
+
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -155,6 +167,10 @@ public class Main extends Application {
             @Override
             public void handle(ActionEvent event)
             {
+                if (dGraph.isEmpty()){
+                    alert.showAndWait();
+                    return;
+                }
                 //调用整体画图函数
                 picName = "pic.png";
                 showDirectedPicture("pic");
@@ -169,6 +185,9 @@ public class Main extends Application {
 
         gridLeft.add(openButton,1,0);
         gridLeft.add(graphButton,0,1);
+        Label tipLabel=new Label("\t\t提示\n\t  点中央图片\n\t  可看高清图");
+        tipLabel.setId("tiplabel");
+        gridLeft.add(tipLabel,0,4,3,1);
         return gridLeft;
     }
 
@@ -196,8 +215,20 @@ public class Main extends Application {
        Button start = new Button("开始");
        Button nextStep = new Button("下一步");
        Button stop = new Button("终止");
+       Button openText= new Button("打开文本");
+       openText.setOnAction(new EventHandler<ActionEvent>() {
+           @Override
+           public void handle(ActionEvent event) {
+               try {
+                   Desktop.getDesktop().open(new File("随机游走路径.txt"));
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+           }
+       });
        TextArea text = new TextArea();
        text.setMaxSize(180,130);
+       text.setEditable(false);
 
        start.setOnAction(new EventHandler<ActionEvent>() {
            @Override
@@ -268,33 +299,57 @@ public class Main extends Application {
        subGrid.add(start,0,3);
        subGrid.add(nextStep,0,4);
        subGrid.add(stop,0,5);
+       subGrid.add(openText,0,6);
        subGrid.add(text,3,3,2,4);
+
        gridRight.add(subGrid,0,3,3,4);
+       Button  exitWindow = new Button("退出程序");
+       exitWindow.setOnAction(new EventHandler<ActionEvent>() {
+           @Override
+           public void handle(ActionEvent event) {
+               System.exit(0);
+           }
+       });
+       gridRight.add(exitWindow,0,8);
 
 
        bridgeWord.setOnAction(new EventHandler<ActionEvent>()
        {
            @Override
            public void handle(ActionEvent event) {
+               if (dGraph.isEmpty()){
+                   alert.showAndWait();
+                   return;
+               }
                bridgeWindow().show();
            }
        });
        generateNewText.setOnAction(new EventHandler<ActionEvent>() {
            @Override
            public void handle(ActionEvent event) {
-               newTextWindow().show();
+               if (dGraph.isEmpty()){
+                   alert.showAndWait();
+                   return;
+               }newTextWindow().show();
            }
        });
        shortestPath.setOnAction(new EventHandler<ActionEvent>() {
            @Override
            public void handle(ActionEvent event) {
+               if (dGraph.isEmpty()){
+                   alert.showAndWait();
+                   return;
+               }
                shortestPathWindow().show();
            }
        });
        randomWalk.setOnAction(new EventHandler<ActionEvent>() {
            @Override
            public void handle(ActionEvent event) {
-
+               if (dGraph.isEmpty()){
+                   alert.showAndWait();
+                   return;
+               }
                if(subGrid.isVisible()){
                    subGrid.setVisible(false);
                    randomWalk.setText("随机游走");
@@ -338,7 +393,7 @@ public class Main extends Application {
         }
         String tmpStr = "";
         while (line != null) {
-            originLine += line;
+            originLine += line+"\n";
             char[] chars = line.toCharArray();
             tmpStr += ' ';
             for (char chr : chars) {
@@ -369,8 +424,8 @@ public class Main extends Application {
         TextArea originText = new TextArea(originLine);
         originText.setEditable(true);
         originText.setWrapText(true);
-        originText.setMaxWidth(150);
-        originText.setMaxHeight(150);
+//        originText.setMaxWidth(330);
+        originText.setMaxHeight(280);
 
         Image image = new Image(Main.class.getResourceAsStream("/sample/resources/" +
                 "images/arrow.png"));
@@ -381,8 +436,8 @@ public class Main extends Application {
         TextArea processText = new TextArea(processLine);
         processText.setEditable(false);
         processText.setWrapText(true);
-        processText.setMaxWidth(150);
-        processText.setMaxHeight(150);
+//        processText.setMaxWidth(330);
+        processText.setMaxHeight(280);
 
         GridPane openGrid = new GridPane();
         openGrid.setHgap(15);
@@ -394,7 +449,7 @@ public class Main extends Application {
 
         Stage openStage = new Stage();
         openStage.setTitle("打开文件");
-        Scene scene = new Scene(openGrid,430,340);
+        Scene scene = new Scene(openGrid,650,340);
         scene.getStylesheets().add(Main.class.getResource("Main.css").toExternalForm());
         openStage.setScene(scene);
 
@@ -412,14 +467,19 @@ public class Main extends Application {
         TextField word2 = new TextField();
         word2.setEditable(true);
         TextArea output = new TextArea();
+        output.setWrapText(true);
         output.setEditable(false);
-        output.setMaxSize(300,50);
+        output.setMaxSize(500,200);
 
         Button button = new Button("查询");
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                output.setText(queryBridgeWords(word1.getText(),word2.getText()));
+                if (word1.getText().equals("")||word2.getText().equals("")){
+                    output.setText("Please input two words!");
+                }else {
+                    output.setText(queryBridgeWords(word1.getText(), word2.getText()));
+                }
             }
         });
 
@@ -432,12 +492,12 @@ public class Main extends Application {
         gridPane.add(outputLabel,0,2);
         gridPane.add(word1,1,0);
         gridPane.add(word2,1,1);
-        gridPane.add(output,1,2);
+        gridPane.add(output,1,2,2,1);
         gridPane.add(button,1,3);
 
         Stage bridgeStage = new Stage();
         bridgeStage.setTitle("查询桥接词");
-        Scene scene = new Scene(gridPane,430,340);
+        Scene scene = new Scene(gridPane,630,340);
         scene.getStylesheets().add(Main.class.getResource("Main.css").toExternalForm());
         bridgeStage.setScene(scene);
 
@@ -450,8 +510,12 @@ public class Main extends Application {
         Label newTextLabel = new Label("新文本");
         TextArea oldText = new TextArea();
         oldText.setEditable(true);
+        oldText.setMaxWidth(280);
+        oldText.setWrapText(true);
         TextArea newText = new TextArea();
         newText.setEditable(false);
+        newText.setMaxWidth(280);
+        newText.setWrapText(true);
         Button button = new Button("转换");
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -472,7 +536,7 @@ public class Main extends Application {
 
         Stage newTextStage = new Stage();
         newTextStage.setTitle("生成新文本");
-        Scene scene = new Scene(gridPane,430,340);
+        Scene scene = new Scene(gridPane,680,340);
         scene.getStylesheets().add(Main.class.getResource("Main.css").toExternalForm());
         newTextStage.setScene(scene);
 
@@ -583,7 +647,7 @@ public class Main extends Application {
 
         Stage shortestPathStage = new Stage();
         shortestPathStage.setTitle("查询最短路径");
-        Scene scene = new Scene(gridPane,430,340);
+        Scene scene = new Scene(gridPane,520,340);
         scene.getStylesheets().add(Main.class.getResource("Main.css").toExternalForm());
         shortestPathStage.setScene(scene);
 
@@ -611,8 +675,10 @@ public class Main extends Application {
     private String queryBridgeWords(String word1, String word2){
         Map<String,VertexInterface<String>> vertexMap=dGraph.getVerTex();
         StringBuilder output= new StringBuilder();
-        if (!vertexMap.containsKey(word1)||!vertexMap.containsKey(word2)){
-            output = new StringBuilder("No word1 or word2 in the graph");
+        if(!vertexMap.containsKey(word1)){
+            output = new StringBuilder("No \""+word1+"\" in the graph");
+        }else if (!vertexMap.containsKey(word2)){
+            output = new StringBuilder("No \""+word2+"\" in the graph");
         }
         else{
             for (String tmpVertex:vertexMap.keySet()) {
@@ -627,7 +693,7 @@ public class Main extends Application {
                 }
             }
             if(output.toString().equals("")){
-                output = new StringBuilder("No bridge words from word1 to word2");
+                output = new StringBuilder("No bridge words from \""+word1+"\" to \""+word2+"\"");
             }else{
                 List<String> usefulWords= new ArrayList<>();
                 StringTokenizer st=new StringTokenizer(output.toString());
@@ -635,11 +701,11 @@ public class Main extends Application {
                     usefulWords.add(st.nextToken());
                 }
                 if(usefulWords.size()==1){
-                    output = new StringBuilder("The bridge word from word1 to word2 is: ");
+                    output = new StringBuilder("The bridge word from \""+word1+"\" to \""+word2+"\" is: ");
                     output.append(usefulWords.get(0));
                     output.append(".");
                 }else {
-                    output = new StringBuilder("The bridge words from word1 to word2 are:");
+                    output = new StringBuilder("The bridge words from \""+word1+"\" to \""+word2+"\" are:");
                     int size = usefulWords.size();
                     int outNum=0;
                     for (String word:usefulWords) {
@@ -915,7 +981,7 @@ public class Main extends Application {
             fileOut.flush();
             fileOut.close();
             MutableGraph gr = Parser.read(Main.class.getResourceAsStream("/sample/a.dot"));
-            Graphviz.fromGraph(gr).width(1000).render(Format.PNG).toFile(new File("out/production/" +
+            Graphviz.fromGraph(gr).width(800).render(Format.PNG).toFile(new File("out/production/" +
                     "VisualizeUrText/sample/resources/images/"+name+".png"));
             dotLines.clear();
         } catch (IOException e) {
@@ -994,7 +1060,7 @@ public class Main extends Application {
     private void writeToRandomText(String content) throws IOException {
         FileWriter fileWriter = new FileWriter("随机游走路径.txt",true);
         String[] strings=content.split("\n");
-        String out =strings[strings.length-1]+"\n";
+        String out =strings[strings.length-1]+"\n\t";
         fileWriter.write(out);
         fileWriter.flush();
         fileWriter.close();
@@ -1002,20 +1068,7 @@ public class Main extends Application {
 
     public static void main(String[] args) throws IOException
     {
-//        String str = "hello";
-//        FileWriter fileWriter;
-//        try {
-//            fileWriter = new FileWriter("E:/abcdef.txt");
-//            fileWriter.write(str);
-//            fileWriter.flush();
-//            fileWriter.close();
-//        } catch (IOException e){
-//            e.printStackTrace();
-//        }
         launch(args);
-//        System.out.println(Main.class.getResource("/"));
-//        MutableGraph g = Parser.read(Main.class.getResourceAsStream("/sample/a.dot"));
-//        Graphviz.fromGraph(g).width(700).render(Format.PNG).toFile(new File("example/dot.png"));
     }
 
 }

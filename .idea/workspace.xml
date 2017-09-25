@@ -1,7 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtocivilizations.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoexplore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoseek.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtostrange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoworlds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/civilizationstonull.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretoexplore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretostrange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretoto.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretoworlds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetocivilizations.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoexplore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoseek.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetostrange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoto.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoworlds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtocivilizations.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoexplore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoseek.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtostrange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoto.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoworlds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/outtoand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/outtolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/outtonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/outtoout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoexplore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoseek.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektostrange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoto.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoworlds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetoand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetoexplore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetostrange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetoto.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetoworlds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totocivilizations.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoexplore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoseek.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totostrange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoworlds.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoand.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstocivilizations.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoexplore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstolife.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstonew.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoseek.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstostrange.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoto.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoworlds.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$1.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$2.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$3.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$4.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$5.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$6.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$7.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$8.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$9.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoand.png" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoand.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoto.png" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoto.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/pic.png" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/pic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.css" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/a.dot" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/a.dot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.css" afterPath="$PROJECT_DIR$/src/sample/Main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/随机游走路径.txt" afterPath="$PROJECT_DIR$/随机游走路径.txt" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,7 +107,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/VisualizeUrText$Main.coverage" NAME="Main Coverage Results" MODIFIED="1505753809499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/VisualizeUrText$Main.coverage" NAME="Main Coverage Results" MODIFIED="1506259266225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>sample.*</FILTER>
     </SUITE>
   </component>
@@ -68,16 +162,18 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="557" column="43" lean-forward="false" selection-start-line="557" selection-start-column="43" selection-end-line="557" selection-end-column="43" />
+            <state relative-caret-position="179">
+              <caret line="79" column="26" lean-forward="true" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4651#4682#0" expanded="false" />
+                <element signature="e#5034#5065#0" expanded="false" />
+                <element signature="e#7233#7269#0" expanded="false" />
+                <element signature="method#addGridRight#0;class#Main#0" expanded="false" />
+                <element signature="method#openWindow#0;class#Main#0" expanded="false" />
                 <element signature="method#bridgeWindow#0;class#Main#0" expanded="false" />
                 <element signature="method#newTextWindow#0;class#Main#0" expanded="false" />
-                <element signature="method#wordsToken#0;class#Main#0" expanded="false" />
-                <element signature="method#queryBridgeWords#0;class#Main#0" expanded="false" />
+                <element signature="method#shortestPathWindow#0;class#Main#0" expanded="false" />
                 <element signature="method#generateNewText#0;class#Main#0" expanded="false" />
+                <marker date="1506311055996" expanded="false" signature="5312:7216" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -86,17 +182,10 @@
       <file leaf-file-name="Main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state relative-caret-position="759">
+              <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="totoexplore.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoexplore.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -104,41 +193,42 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CSS</find>
-      <find>右</find>
-      <find>Main.css</find>
-      <find>pic.</find>
-      <find>setid</find>
+      <find>processl</find>
+      <find>TextField output</find>
+      <find>TextField o</find>
+      <find>textfield ou</find>
+      <find>新文本窗口</find>
+      <find>作图</find>
+      <find>终止</find>
+      <find>open(</find>
+      <find>\n</find>
+      <find>写入</find>
+      <find>son</find>
+      <find>openT</find>
+      <find>midB</find>
       <find>middleBu</find>
-      <find>middlePi</find>
-      <find>picNa</find>
-      <find>gr)</find>
-      <find>picNam</find>
-      <find>main</find>
-      <find>src</find>
-      <find>04</find>
-      <find>digra</find>
-      <find>digraphimageview.seti</find>
-      <find>dig</find>
-      <find>d</find>
-      <find>digr</find>
-      <find>最短</find>
+      <find>左侧</find>
+      <find>middle</find>
+      <find>labe</find>
+      <find>\t\t</find>
+      <find>局部</find>
       <find>cal</find>
-      <find>2000</find>
-      <find>切换图片</find>
-      <find>Main.</find>
-      <find>desk</find>
-      <find>exis</find>
-      <find>&quot;不可达&quot;</find>
-      <find>paths.e</find>
-      <find>不可达</find>
-      <find>paths</find>
-      <find>在这里</find>
+      <find>600</find>
+      <find>No b</find>
+      <find>转换</find>
+      <find>最短路径</find>
+      <find>随机</find>
+      <find>query</find>
+      <find>shor</find>
+      <find>getPre</find>
+      <find>words</find>
+      <find>wordst</find>
     </findStrings>
     <replaceStrings>
       <replace>String</replace>
       <replace>indexPic</replace>
       <replace>indexEnd</replace>
+      <replace>alert</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -242,7 +332,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -285,8 +374,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,9 +392,9 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/javafxsvg_jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -482,6 +572,13 @@
       <workItem from="1505782656066" duration="12140000" />
       <workItem from="1505800050074" duration="7218000" />
       <workItem from="1505816908878" duration="11116000" />
+      <workItem from="1506134131924" duration="3360000" />
+      <workItem from="1506245902503" duration="62000" />
+      <workItem from="1506253072910" duration="26000" />
+      <workItem from="1506253253666" duration="8827000" />
+      <workItem from="1506263747314" duration="1255000" />
+      <workItem from="1506305820446" duration="3644000" />
+      <workItem from="1506325242827" duration="3967000" />
     </task>
     <task id="LOCAL-00001" summary="using IntelliJ to rearrange">
       <created>1505184975670</created>
@@ -501,7 +598,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129444000" />
+    <option name="totallyTimeSpent" value="150585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -515,7 +612,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28289473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28070176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -560,7 +657,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="91" />
+      <option name="time" value="92" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -646,11 +743,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoto.png" />
-    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totocivilizations.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totocivilizations.png" />
     <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoto.png" />
     <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtonew.png" />
     <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoexplore.png" />
@@ -713,16 +806,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totonew.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totolife.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totonew.png" />
+    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totolife.png" />
     <entry file="file://$PROJECT_DIR$/example/dot.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -766,11 +851,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoexplore.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoexplore.png" />
     <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/pic.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -783,24 +864,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        <state relative-caret-position="759">
+          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="557" column="43" lean-forward="false" selection-start-line="557" selection-start-column="43" selection-end-line="557" selection-end-column="43" />
+        <state relative-caret-position="179">
+          <caret line="79" column="26" lean-forward="true" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4651#4682#0" expanded="false" />
+            <element signature="e#5034#5065#0" expanded="false" />
+            <element signature="e#7233#7269#0" expanded="false" />
+            <element signature="method#addGridRight#0;class#Main#0" expanded="false" />
+            <element signature="method#openWindow#0;class#Main#0" expanded="false" />
             <element signature="method#bridgeWindow#0;class#Main#0" expanded="false" />
             <element signature="method#newTextWindow#0;class#Main#0" expanded="false" />
-            <element signature="method#wordsToken#0;class#Main#0" expanded="false" />
-            <element signature="method#queryBridgeWords#0;class#Main#0" expanded="false" />
+            <element signature="method#shortestPathWindow#0;class#Main#0" expanded="false" />
             <element signature="method#generateNewText#0;class#Main#0" expanded="false" />
+            <marker date="1506311055996" expanded="false" signature="5312:7216" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -811,6 +894,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>VisualizeUrText:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
