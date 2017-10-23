@@ -1,101 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtocivilizations.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoexplore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoseek.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtostrange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoworlds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/civilizationstonull.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretoexplore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretostrange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretoto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/exploretoworlds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetocivilizations.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoexplore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoseek.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetostrange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/lifetoworlds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtocivilizations.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoexplore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoseek.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtostrange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/newtoworlds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/outtoand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/outtolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/outtonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/outtoout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoexplore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoseek.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektostrange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/seektoworlds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetoand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetoexplore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetostrange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetoto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/strangetoworlds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totocivilizations.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoexplore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoseek.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totostrange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totoworlds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoand.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstocivilizations.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoexplore.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstolife.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstonew.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoseek.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstostrange.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoto.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/worldstoworlds.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$1.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$2.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$3.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$4.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$5.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$6.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$7.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$8.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$9.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoand.png" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoand.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoto.png" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/andtoto.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/pic.png" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/pic.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.css" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/a.dot" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/a.dot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.css" afterPath="$PROJECT_DIR$/src/sample/Main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/随机游走路径.txt" afterPath="$PROJECT_DIR$/随机游走路径.txt" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -162,28 +68,51 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="79" column="26" lean-forward="true" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+            <state relative-caret-position="322">
+              <caret line="967" column="9" lean-forward="false" selection-start-line="967" selection-start-column="9" selection-end-line="967" selection-end-column="9" />
               <folding>
-                <element signature="e#5034#5065#0" expanded="false" />
-                <element signature="e#7233#7269#0" expanded="false" />
-                <element signature="method#addGridRight#0;class#Main#0" expanded="false" />
-                <element signature="method#openWindow#0;class#Main#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#4843#4874#0" expanded="false" />
+                <element signature="e#11152#11153#0" expanded="true" />
+                <element signature="e#11228#11229#0" expanded="true" />
                 <element signature="method#bridgeWindow#0;class#Main#0" expanded="false" />
                 <element signature="method#newTextWindow#0;class#Main#0" expanded="false" />
-                <element signature="method#shortestPathWindow#0;class#Main#0" expanded="false" />
-                <element signature="method#generateNewText#0;class#Main#0" expanded="false" />
-                <marker date="1506311055996" expanded="false" signature="5312:7216" ph="{...}" />
+                <element signature="method#wordsToken#0;class#Main#0" expanded="false" />
+                <element signature="method#formatPlus#0;class#Main#0" expanded="false" />
+                <element signature="method#hasSameEdge#0;class#Main#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.css">
+      <file leaf-file-name="Vertex.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/GraphInterface/Vertex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+            <state relative-caret-position="2461">
+              <caret line="128" column="5" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+              <folding>
+                <element signature="e#5785#5786#0" expanded="true" />
+                <element signature="e#5836#5837#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dot.dot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/dot.dot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="null" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/null">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -193,42 +122,46 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>processl</find>
-      <find>TextField output</find>
-      <find>TextField o</find>
-      <find>textfield ou</find>
-      <find>新文本窗口</find>
-      <find>作图</find>
-      <find>终止</find>
-      <find>open(</find>
-      <find>\n</find>
-      <find>写入</find>
-      <find>son</find>
-      <find>openT</find>
-      <find>midB</find>
-      <find>middleBu</find>
-      <find>左侧</find>
-      <find>middle</find>
-      <find>labe</find>
-      <find>\t\t</find>
-      <find>局部</find>
-      <find>cal</find>
-      <find>600</find>
-      <find>No b</find>
-      <find>转换</find>
-      <find>最短路径</find>
-      <find>随机</find>
-      <find>query</find>
-      <find>shor</find>
-      <find>getPre</find>
-      <find>words</find>
-      <find>wordst</find>
+      <find>ActionEven</find>
+      <find>ActionEvent</find>
+      <find>ActionEvent</find>
+      <find>ActionEvent e</find>
+      <find>ActionEvent ev</find>
+      <find>ActionEvent eve</find>
+      <find>ActionEvent even</find>
+      <find>ActionEvent event</find>
+      <find>final ActionEvent event</find>
+      <find>final final ActionEvent event</find>
+      <find>y</find>
+      <find>yi'j</find>
+      <find>yi'ji</find>
+      <find>yi'jin</find>
+      <find>yi'jing</find>
+      <find>已经</find>
+      <find>Desktop</find>
+      <find>s</find>
+      <find>su</find>
+      <find>sui</find>
+      <find>sui'ji</find>
+      <find>sui'ji'y</find>
+      <find>sui'ji'you</find>
+      <find>sui'ji'you'zou</find>
+      <find>随机游走</find>
+      <find>w</find>
+      <find>writ</find>
+      <find>write</find>
+      <find>writeT</find>
+      <find>writeTo</find>
     </findStrings>
     <replaceStrings>
       <replace>String</replace>
       <replace>indexPic</replace>
       <replace>indexEnd</replace>
       <replace>alert</replace>
+      <replace>=</replace>
+      <replace />
+      <replace>,</replace>
+      <replace>final ActionEvent event</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -272,14 +205,23 @@
         <option value="$PROJECT_DIR$/src/sample/UserInterface/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/GraphInterface/VertexInterface.java" />
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/GraphInterface/Vertex.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/sample/GraphInterface/DirectedGraphInterface.java" />
-        <option value="$PROJECT_DIR$/src/sample/GraphInterface/DirectedGraph.java" />
         <option value="$PROJECT_DIR$/src/sample/a.dot" />
         <option value="$PROJECT_DIR$/src/sample/resources/a.dot" />
         <option value="$PROJECT_DIR$/out/production/VisualizeUrText/sample/a.dot" />
         <option value="$PROJECT_DIR$/src/sample/Main.css" />
+        <option value="$PROJECT_DIR$/.classpath" />
+        <option value="$PROJECT_DIR$/.project" />
+        <option value="$PROJECT_DIR$/VisualizeUrText.eml" />
+        <option value="$PROJECT_DIR$/VisualizeUrText.userlibraries" />
+        <option value="$PROJECT_DIR$/a.dot" />
+        <option value="$PROJECT_DIR$/java.io.BufferedInputStream@471665b8" />
+        <option value="$PROJECT_DIR$/java.io.BufferedInputStream@5a780681" />
+        <option value="$PROJECT_DIR$/null" />
+        <option value="$PROJECT_DIR$/src/sample/GraphInterface/DirectedGraph.java" />
+        <option value="$PROJECT_DIR$/src/sample/GraphInterface/Vertex.java" />
+        <option value="$PROJECT_DIR$/随机游走路径.txt" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
       </list>
     </option>
@@ -332,51 +274,38 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="VisualizeUrText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisualizeUrText" type="462c0819:PsiDirectoryNode" />
+              <item name="VisualizeUrText-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisualizeUrText-master" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VisualizeUrText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisualizeUrText" type="462c0819:PsiDirectoryNode" />
+              <item name="VisualizeUrText-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisualizeUrText-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VisualizeUrText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisualizeUrText" type="462c0819:PsiDirectoryNode" />
+              <item name="VisualizeUrText-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisualizeUrText-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VisualizeUrText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisualizeUrText" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VisualizeUrText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VisualizeUrText" type="462c0819:PsiDirectoryNode" />
+              <item name="VisualizeUrText-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VisualizeUrText-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VisualizeUrText" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,8 +320,8 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="D:/work/软件工程/VisualizeUrText-master" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -514,12 +443,121 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="VisualizeUrText" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
       <method />
     </configuration>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -579,6 +617,7 @@
       <workItem from="1506263747314" duration="1255000" />
       <workItem from="1506305820446" duration="3644000" />
       <workItem from="1506325242827" duration="3967000" />
+      <workItem from="1508495993570" duration="5656000" />
     </task>
     <task id="LOCAL-00001" summary="using IntelliJ to rearrange">
       <created>1505184975670</created>
@@ -598,36 +637,53 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150585000" />
+    <option name="totallyTimeSpent" value="156241000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785088" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39249146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28070176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17604166" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22291666" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4240196" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265074" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="PMD" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14675768" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40441176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34264883" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965687" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22156653" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4243421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -637,7 +693,7 @@
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +713,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="92" />
+      <option name="time" value="93" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -666,56 +722,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/resources/icons/images.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/TextInputControl.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashSet.java" />
-    <entry file="file://$PROJECT_DIR$/example/ex2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/resources/images/data-syncing-512.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/resources/images/03.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GraphInterface/VertexInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GraphInterface/DirectedGraphInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GraphInterface/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3151">
-          <caret line="166" column="54" lean-forward="false" selection-start-line="166" selection-start-column="54" selection-end-line="166" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/ex1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -764,48 +770,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/abc.dot" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="1011" column="0" lean-forward="false" selection-start-line="1011" selection-start-column="0" selection-end-line="1011" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="8413" column="0" lean-forward="false" selection-start-line="8413" selection-start-column="0" selection-end-line="8413" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="2494" column="0" lean-forward="false" selection-start-line="2494" selection-start-column="0" selection-end-line="2494" selection-end-column="0" />
-          <folding>
-            <element signature="e#66617#66618#0" expanded="false" />
-            <element signature="e#66663#66664#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/File.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Node.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/Button.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Scene.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/event/Event.java" />
     <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totonew.png" />
     <entry file="file://$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/totolife.png" />
     <entry file="file://$PROJECT_DIR$/example/dot.png">
@@ -823,13 +792,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/a.dot" />
     <entry file="file://$PROJECT_DIR$/src/sample/a.dot.png">
       <provider selected="true" editor-type-id="images">
@@ -841,13 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GraphInterface/DirectedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -864,26 +819,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
+        <state relative-caret-position="825">
           <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java.io.BufferedInputStream@471665b8">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java.io.BufferedInputStream@5a780681">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/null">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisualizeUrText.userlibraries">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VisualizeUrText.eml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GraphInterface/DirectedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GraphInterface/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2461">
+          <caret line="128" column="5" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+          <folding>
+            <element signature="e#5785#5786#0" expanded="true" />
+            <element signature="e#5836#5837#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/dot.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/随机游走路径.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="79" column="26" lean-forward="true" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+        <state relative-caret-position="322">
+          <caret line="967" column="9" lean-forward="false" selection-start-line="967" selection-start-column="9" selection-end-line="967" selection-end-column="9" />
           <folding>
-            <element signature="e#5034#5065#0" expanded="false" />
-            <element signature="e#7233#7269#0" expanded="false" />
-            <element signature="method#addGridRight#0;class#Main#0" expanded="false" />
-            <element signature="method#openWindow#0;class#Main#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4843#4874#0" expanded="false" />
+            <element signature="e#11152#11153#0" expanded="true" />
+            <element signature="e#11228#11229#0" expanded="true" />
             <element signature="method#bridgeWindow#0;class#Main#0" expanded="false" />
             <element signature="method#newTextWindow#0;class#Main#0" expanded="false" />
-            <element signature="method#shortestPathWindow#0;class#Main#0" expanded="false" />
-            <element signature="method#generateNewText#0;class#Main#0" expanded="false" />
-            <marker date="1506311055996" expanded="false" signature="5312:7216" ph="{...}" />
+            <element signature="method#wordsToken#0;class#Main#0" expanded="false" />
+            <element signature="method#formatPlus#0;class#Main#0" expanded="false" />
+            <element signature="method#hasSameEdge#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -955,6 +1000,17 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>javafxsvg_jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
