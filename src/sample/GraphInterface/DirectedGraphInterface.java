@@ -10,11 +10,11 @@ public interface DirectedGraphInterface<T> {
 
     void addVertex(T vertexLabel);
 
-    void addEdge(T begin, T end, double edgeWeight);
+    void addEdge(T begin,  T end,  double edgeWeight);
 
-    void addEdge(T begin, T end);
+    void addEdge(T begin,  T end);
 
-    boolean hasEdge(T begin, T end);
+    boolean hasEdge(T begin,  T end);
 
     boolean isEmpty();
 
@@ -26,8 +26,8 @@ public interface DirectedGraphInterface<T> {
 
     void f(T vertexLabel);
 
-    Map<T,VertexInterface<T>> getVerTex();
+    Map<T, VertexInterface<T>> getVerTex();
 
-    double getEdgeWeight(T beginVertex,T endVertex);
+    double getEdgeWeight(T beginVertex, T endVertex);
 
 }
