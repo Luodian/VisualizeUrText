@@ -2,7 +2,6 @@ package sample;
 
 import sample.GraphInterface.DirectedGraph;
 import sample.GraphInterface.DirectedGraphInterface;
-import sample.GraphInterface.VertexInterface;
 
 import java.io.*;
 import java.util.*;
@@ -86,63 +85,6 @@ public class Without {
 			pre = cur;
 		}
 	}
-	
-	/*查询桥接词*/
-	public String queryBridgeWords (String fileName, String word1, String word2) {
-		
-		readFile (fileName);
-		
-		Map<String, VertexInterface<String>> vertexMap = dGraph.getVerTex ();
-		StringBuilder output = new StringBuilder ();
-		if (!vertexMap.containsKey (word1)) {
-			output = new StringBuilder ("No \"" + word1 + "\" in the graph");
-		} else if (!vertexMap.containsKey (word2)) {
-			output = new StringBuilder ("No \"" + word2 + "\" in the graph");
-		} else {
-			for (String tmpVertex : vertexMap.keySet ()) {
-				if (tmpVertex.equals (word1) || tmpVertex.equals (word2)) {
-					continue;
-				} else {
-					if (dGraph.hasEdge (word1, tmpVertex) && dGraph.hasEdge (tmpVertex, word2)) {
-						output.append (tmpVertex);
-						output.append (" ");
-					}
-				}
-			}
-			if (output.length () == 0) {
-				output = new StringBuilder ("No bridge words from \"" + word1 + "\" to \"" + word2 + "\"");
-			} else {
-				List<String> usefulWords = new ArrayList<> ();
-				StringTokenizer st = new StringTokenizer (output.toString ());
-				while (st.hasMoreTokens ()) {
-					usefulWords.add (st.nextToken ());
-				}
-				if (usefulWords.size () == 1) {
-					output = new StringBuilder ("The bridge word from \"" + word1 + "\" to \"" + word2 + "\" is: ");
-					output.append (usefulWords.get (0));
-					output.append (".");
-				} else {
-					output = new StringBuilder ("The bridge words from \"" + word1 + "\" to \"" + word2 + "\" are:");
-					int size = usefulWords.size ();
-					int outNum = 0;
-					for (String word : usefulWords) {
-						outNum++;
-						if (outNum != size) {
-							output.append (" ");
-							output.append (word);
-							output.append (',');
-						} else {
-							output.append (" and ");
-							output.append (word);
-							output.append ('.');
-						}
-					}
-				}
-			}
-		}
-		return output.toString ();
-	}
-	
 	/*将double类型的权值化为int类型*/
 	private int getEdgeWeightInt (String word1, String word2) {
 		if (dGraph.getEdgeWeight (word1, word2) == Double.MAX_VALUE) {
@@ -173,11 +115,10 @@ public class Without {
 		}
 		producedWords.add (sorceWord);
 		flag.put (sorceWord, true);
-//        allWords.remove(sorceWord);
+
 		while (producedWords.size () != allWords.size ()) {
 			String curStr = null;
 			int curCost = Integer.MAX_VALUE;
-//            int curCost  =  10000;
 			for (Map.Entry<String, Integer> entry : cost.entrySet ()) {
 				if (!flag.get (entry.getKey ()) && entry.getValue () < curCost) {
 					curCost = entry.getValue ();
@@ -240,7 +181,9 @@ public class Without {
 		
 		readFile (fileName);
 		
-		if (!(word1.equals ("")) && !(word2.equals (""))) {
+		if (dGraph.getVerTex ().keySet ().size () == 0) {
+			return "空图";
+		} else if (!(word1.equals ("")) && !(word2.equals (""))) {
 			if (!dGraph.getVerTex ().keySet ().contains (word1) || !dGraph.getVerTex ().keySet ().contains (word2)) {
 				return "至少有一个word不存在";
 			}
@@ -251,7 +194,9 @@ public class Without {
 		}
 		//都是空串
 		else if (word1.equals ("") && word2.equals ("")) {
-			return "无输入";
+			return "起点和终点均为空";
+		} else if (word1.equals ("")) {
+			return "起点不能为空";
 		}
 		//其中一个是空串，另一个不是空串
 		else {

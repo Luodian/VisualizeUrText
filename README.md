@@ -1,5 +1,6 @@
 # Visualize-Ur-Text
 [![Build Status](https://travis-ci.org/Luodian/VisualizeUrText.svg?branch=Lab6-Black-Boxing)](https://travis-ci.org/Luodian/VisualizeUrText)
+
 Lab1-Pair_Programming
 
 Collaborators: 武德浩，李博
