@@ -1,6 +1,7 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import sample.Without;
 
 import static org.junit.Assert.assertTrue;
 
@@ -9,7 +10,6 @@ import static org.junit.Assert.assertTrue;
  *
  * @author <Authors name>
  * @version 1.0
- * @since <pre>ʮһ�� 7, 2017</pre>
  */
 public class WithoutTest {
 	Without without;

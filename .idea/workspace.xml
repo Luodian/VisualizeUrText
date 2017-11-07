@@ -1,103 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d18a9101-931e-4ce4-8746-4f37a81b7ff8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/first_maven_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/javafxsvg_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace 2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VisualizeUrText.eml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VisualizeUrText.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/VisualizeUrText.userlibraries" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/a.dot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/abc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/dot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/dt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/ex1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/ex1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/ex2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/ex3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/ex4-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example/pic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/first_maven_jar/first_maven.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/java.io.BufferedInputStream@471665b8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/java.io.BufferedInputStream@5a780681" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javafxsvg_jar/javafxsvg.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/null" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/DirectedGraph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/DirectedGraphInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/Vertex$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/Vertex$Edge.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/Vertex$NeighborIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/Vertex$WeightIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/Vertex.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/VertexInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/a.dot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/dot.dot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/icons/images.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/icons/unnamed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/a.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/b.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/button.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/c.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/data-syncing-512.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/gba.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/gbass.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/mainlabel.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/test.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/sample.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Without.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/WithoutTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/a.dot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/dot.dot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/icons/images.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/icons/unnamed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/a.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/b.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/button.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/c.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/data-syncing-512.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/gba.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/gbass.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/mainlabel.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/resources/images/test.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/随机游走路径.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/description.html" afterPath="$PROJECT_DIR$/.idea/description.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="d18a9101-931e-4ce4-8746-4f37a81b7ff8" name="Default" comment="配置了Travis CI">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/DirectedGraph.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/DirectedGraphInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/a.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/b.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/c.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/d.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/e.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/f.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/g.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/h.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/i.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/j.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Test/k.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Vertex.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/VertexInterface.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Without.java" afterPath="$PROJECT_DIR$/src/Without.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WithoutTest.java" afterPath="$PROJECT_DIR$/src/WithoutTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,8 +40,8 @@
       <file leaf-file-name="Without.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Without.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="277">
+              <caret line="252" column="23" lean-forward="false" selection-start-line="252" selection-start-column="23" selection-end-line="252" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WithoutTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WithoutTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WithoutTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,21 +61,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vcs.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <file leaf-file-name="VertexInterface.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/VertexInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="190">
+              <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/DirectedGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -160,6 +94,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Luodian &lt;drluodian@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -170,8 +109,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/Without.java" />
         <option value="$PROJECT_DIR$/src/WithoutTest.java" />
+        <option value="$PROJECT_DIR$/src/VertexInterface.java" />
+        <option value="$PROJECT_DIR$/src/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/sample/VertexInterface.java" />
       </list>
     </option>
   </component>
@@ -227,6 +170,17 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -305,6 +259,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d18a9101-931e-4ce4-8746-4f37a81b7ff8" name="Default" comment="" />
@@ -313,8 +270,23 @@
       <option name="presentableId" value="Default" />
       <updated>1510034785442</updated>
       <workItem from="1510034792595" duration="275000" />
-      <workItem from="1510035116688" duration="73000" />
+      <workItem from="1510035116688" duration="2237000" />
     </task>
+    <task id="LOCAL-00001" summary="配置了Travis CI">
+      <created>1510035220000</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1510035220000</updated>
+    </task>
+    <task id="LOCAL-00002" summary="配置了Travis CI">
+      <created>1510035695665</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1510035695665</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -327,9 +299,30 @@
     <history-entry file="WithoutTest - 2017.11.07 at 14h 12m 47s.xml">
       <configuration name="WithoutTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WithoutTest - 2017.11.07 at 14h 38m 06s.xml">
+      <configuration name="WithoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WithoutTest - 2017.11.07 at 14h 39m 17s.xml">
+      <configuration name="WithoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WithoutTest - 2017.11.07 at 14h 50m 47s.xml">
+      <configuration name="WithoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WithoutTest - 2017.11.07 at 14h 56m 07s.xml">
+      <configuration name="WithoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WithoutTest - 2017.11.07 at 14h 56m 13s.xml">
+      <configuration name="WithoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WithoutTest - 2017.11.07 at 14h 56m 20s.xml">
+      <configuration name="WithoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WithoutTest - 2017.11.07 at 14h 57m 58s.xml">
+      <configuration name="WithoutTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="348000" />
+    <option name="totallyTimeSpent" value="2512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="740" extended-state="6" />
@@ -345,14 +338,15 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5083933" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22940226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14862682" sideWeight="0.4916067" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -362,7 +356,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,9 +364,17 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="配置了Travis CI" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置了Travis CI" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Without.java">
@@ -413,7 +414,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/description.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -429,10 +454,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Without.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="277">
+          <caret line="252" column="23" lean-forward="false" selection-start-line="252" selection-start-column="23" selection-end-line="252" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -441,13 +474,153 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WithoutTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DirectedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DirectedGraphInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar!/sun/security/provider/certpath/Vertex.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VertexInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DirectedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/VertexInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>bootstrap</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Lab1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
