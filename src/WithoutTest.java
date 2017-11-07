@@ -128,4 +128,63 @@ public class WithoutTest {
 				"wish -> you -> asked -> her : 3\n"));
 	}
 	
+	@Test
+	public void testBridge1() throws Exception {
+//TODO: Test goes here...
+		String str = new Without().queryBridgeWords("src/sample/Test/1.txt","zero","four");
+		System.out.println (str);
+		assertTrue(str.equals("No \"zero\" and \"four\" in the graph"));
+		
+	}
+	
+	@Test
+	public void testBridge2() throws Exception {
+//TODO: Test goes here...
+		String str = new Without().queryBridgeWords("src/sample/Test/1.txt","zero","one");
+		assertTrue(str.equals("No \"zero\" in the graph"));
+	}
+	
+	@Test
+	public void testBridge3() throws Exception {
+//TODO: Test goes here...
+		String str = new Without().queryBridgeWords("src/sample/Test/1.txt","one","four");
+		assertTrue(str.equals("No \"four\" in the graph"));
+	}
+	
+	//无-》0
+	@Test
+	public void testBridge4() throws Exception {
+//TODO: Test goes here...
+		String str = new Without().queryBridgeWords("src/sample/Test/5.txt","one","one");
+		assertTrue(str.equals("No bridge words from \"one\" to \"one\""));
+	}
+	
+	//无-》有-》1
+	@Test
+	public void testBridge5() throws Exception {
+//TODO: Test goes here...
+		String str = new Without().queryBridgeWords("src/sample/Test/6.txt","an","computer");
+		assertTrue(str.equals("The bridge word from \"an\" to \"computer\" is: phone."));
+	}
+	@Test
+	public void testBridge6() throws Exception {
+//TODO: Test goes here...
+		String str = new Without().queryBridgeWords("src/sample/Test/6.txt","an","computer");
+		System.out.println (str);
+		assertTrue(str.equals("The bridge word from \"an\" to \"computer\" is: phone."));
+	}
+	
+	@Test
+	public void testBridge7() throws Exception {
+//TODO: Test goes here...
+		String str = new Without().queryBridgeWords("src/sample/Test/3.txt","worlds","seek");
+		assertTrue(str.equals("The bridge word from \"worlds\" to \"seek\" is: to."));
+	}
+	@Test
+	public void testBridge8() throws Exception {
+//TODO: Test goes here...
+		String str = new Without().queryBridgeWords("src/sample/Test/3.txt","to","strange");
+		assertTrue(str.equals("The bridge word from \"to\" to \"strange\" is: explore."));
+	}
+	
 } 

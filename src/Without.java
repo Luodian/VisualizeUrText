@@ -254,6 +254,8 @@ public class Without {
 			if (!getPre(new ArrayList<>(), word1, word2)){
 				return "不可达";
 			}
+			
+			
 		}
 		//都是空串
 		else if (word1.equals("") && word2.equals("")){
