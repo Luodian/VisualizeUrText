@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="增加了Travis CI">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/DirectedGraph.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/GraphInterface/DirectedGraph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$1.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$2.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$3.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$4.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$5.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$6.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$7.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$8.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$9.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.css" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/Main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/a.svg" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/a.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/b.svg" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/b.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/button.svg" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/button.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/c.svg" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/c.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/gba.svg" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/gba.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/gbass.svg" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/gbass.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/mainlabel.svg" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/resources/images/mainlabel.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/VisualizeUrText/sample/sample.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,7 +100,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11">
+            <state relative-caret-position="75">
               <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
               <folding>
                 <element signature="method#start#0;class#Main#0" expanded="false" />
@@ -103,11 +126,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WithoutTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WithoutTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/WithoutTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="1950">
               <caret line="136" column="27" lean-forward="true" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -205,6 +248,7 @@
         <option value="$PROJECT_DIR$/out/production/VisualizeUrText/sample/a.dot" />
         <option value="$PROJECT_DIR$/src/sample/Main.css" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -231,7 +275,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-2" />
     <option name="y" value="23" />
     <option name="width" value="1235" />
@@ -258,7 +302,6 @@
     <panes>
       <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,6 +322,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -522,7 +566,8 @@
       <workItem from="1509958211106" duration="580000" />
       <workItem from="1509958831703" duration="469000" />
       <workItem from="1509961495636" duration="613000" />
-      <workItem from="1510024801600" duration="1229000" />
+      <workItem from="1510024801600" duration="1374000" />
+      <workItem from="1510031529057" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="using IntelliJ to rearrange">
       <created>1505184975670</created>
@@ -545,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510030212924</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加了Travis CI">
+      <created>1510031361379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1510031361379</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -560,7 +612,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156572000" />
+    <option name="totallyTimeSpent" value="156734000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -572,25 +624,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="740" extended-state="6" />
+    <frame x="-2" y="23" width="1235" height="740" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785088" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27884614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27884614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43537965" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34248787" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="VisualizeUrText" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34199497" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22291666" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -606,10 +655,13 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32785088" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43537965" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="VisualizeUrText" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -625,7 +677,8 @@
     <MESSAGE value="using IntelliJ to rearrange" />
     <MESSAGE value="modified size of main scene" />
     <MESSAGE value="增加了test case" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了test case" />
+    <MESSAGE value="增加了Travis CI" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了Travis CI" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -640,8 +693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/TextInputControl.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/HashSet.java" />
     <entry file="file://$PROJECT_DIR$/example/ex2.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -794,7 +845,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
+        <state relative-caret-position="75">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
           <folding>
             <element signature="method#start#0;class#Main#0" expanded="false" />
@@ -809,10 +860,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/WithoutTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="1950">
           <caret line="136" column="27" lean-forward="true" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
