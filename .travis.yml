@@ -9,6 +9,5 @@ before_install:
 install:
   - "echo skipped"
 script:
-#  - "echo skipped" 
-  - mvn install -Dmaven.javadoc.skip=true
+#  - "echo skipped"
 # - mvn deploy
