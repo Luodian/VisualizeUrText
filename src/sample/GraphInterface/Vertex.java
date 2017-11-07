@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
     persist instances of them or send them over a wire."
                                                          -"Effective Java"
  */
-class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
+class Vertex<T> implements VertexInterface<T>, java.io.Serializable {
     /**
      * Edge类封装了出边，内部包含一个weight属性以及出边的下一个结点。
      * 把protected class似乎可以当成是C++的类内部结构体来使用。
@@ -24,11 +24,11 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
     protected class Edge implements java.io.Serializable {
         private VertexInterface<T> vertex;
         public Double weight;
-
-        protected Edge(final VertexInterface<T> _v, final double _w) {
-            vertex  =  _v;
-            weight  =  _w;
-        }
+	
+	    protected Edge (VertexInterface<T> _v, double _w) {
+		    vertex = _v;
+		    weight = _w;
+	    }
 
         protected VertexInterface<T> getEndVertex() {
             return vertex;
@@ -37,10 +37,10 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
         protected double getWeight() {
             return weight;
         }
-
-        protected void setWeight(final Double _w) {
-            weight  =  _w;
-        }
+	
+	    protected void setWeight (Double _w) {
+		    weight = _w;
+	    }
     }
 
     /**
@@ -50,11 +50,11 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
     private class NeighborIterator implements Iterator<Edge> {
 
         // data field
-        private Iterator<Edge> edgesIterator;
+        Iterator<Edge> edgesIterator;
 
         // construct function
         private NeighborIterator() {
-            edgesIterator  =  edgeList.iterator();
+	        edgesIterator = edgeList.iterator ();
         }
 
         @Override
@@ -66,7 +66,7 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
         public Edge next() {
             Edge nextEdge;
             if (edgesIterator.hasNext()) {
-                nextEdge  =  edgesIterator.next();
+	            nextEdge = edgesIterator.next ();
             } else {
                 throw new NoSuchElementException();
             }
@@ -81,7 +81,7 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
 
     /**
      * Task: 生成一个遍历该顶点所有邻接边的权值的迭代器
-     * 权值是Edge类的属性, 因此先获得一个遍历Edge对象的迭代器, 取得Edge对象, 再获得权值
+     * 权值是Edge类的属性,因此先获得一个遍历Edge对象的迭代器,取得Edge对象,再获得权值
      *
      * @param
      */
@@ -89,7 +89,7 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
         private Iterator<Edge> edgesIterator;
 
         private WeightIterator() {
-            edgesIterator  =  edgeList.iterator();
+	        edgesIterator = edgeList.iterator ();
         }
 
         @Override
@@ -101,8 +101,8 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
         public Double next() {
             Double result;
             if (edgesIterator.hasNext()) {
-                Edge edge  =  edgesIterator.next();
-                result  =  edge.getWeight();
+	            Edge edge = edgesIterator.next ();
+	            result = edge.getWeight ();
             } else {
                 throw new NoSuchElementException();
             }
@@ -125,14 +125,14 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
     /*
         construct function
      */
-
-    Vertex(final T _label) {
-        label  =  _label;
-        edgeList  =  new LinkedList<>();
-        visited  =  false;
-        previousVertex  =  null;
-        cost  =  0;
-    }
+	
+	public Vertex (T _label) {
+		label = _label;
+		edgeList = new LinkedList<> ();
+		visited = false;
+		previousVertex = null;
+		cost = 0;
+	}
 
     @Override
     public T getLabel() {
@@ -141,12 +141,12 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
 
     @Override
     public void visit() {
-        this.visited  =  true;
+	    this.visited = true;
     }
 
     @Override
     public void unvisit() {
-        this.visited  =  false;
+	    this.visited = false;
     }
 
     @Override
@@ -156,38 +156,35 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
 
     /*
         add edges between current vertex to endVertex
-        @param:edgeWeight can be zero,
-        but java didn't support default param,
-        we need use polymorphism functions.
+        @param:edgeWeight can be zero, but java didn't support default param, we need use polymorphism functions.
         @return:return false when found duplicate edges.
      */
 
     @Override
-    public void addEdge(final VertexInterface<T> endVertex,
-                        final double edgeWeight) {
+    public void addEdge (VertexInterface<T> endVertex, double edgeWeight) {
         if (!this.equals(endVertex)) {
             Iterator<Edge> edgeIterator;
-            edgeIterator  =  this.getNeighborIterator();
-            boolean duplicate_Edges  =  false;
+	        edgeIterator = this.getNeighborIterator ();
+	        boolean duplicate_Edges = false;
 
             // find whether their exists duplicated edges
 
             while (!duplicate_Edges && edgeIterator.hasNext()) {
                 // 使用.next()方法获取边迭代器所指的终点。
-                Edge nextEdge  =  edgeIterator.next();
-                VertexInterface<T> neighbor_Vertex  =  nextEdge.getEndVertex();
+	            Edge nextEdge = edgeIterator.next ();
+	            VertexInterface<T> neighbor_Vertex = nextEdge.getEndVertex ();
 
                 // we need to override equals method for VertexInterface
 
                 if (endVertex.equals(neighbor_Vertex)) {
-                    duplicate_Edges  =  true;
-                    // sum up new edge weight;
+	                duplicate_Edges = true;
+	                // sum up new edge weight;
                     nextEdge.setWeight(nextEdge.getWeight() + edgeWeight);
                     break;
                 }
             }
             if (!duplicate_Edges) {
-                edgeList.add(new Edge(endVertex,  edgeWeight));
+	            edgeList.add (new Edge (endVertex, edgeWeight));
             }
         }
     }
@@ -197,8 +194,8 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
      */
 
     @Override
-    public void addEdge(final VertexInterface<T> endVertex) {
-        addEdge(endVertex,  0);
+    public void addEdge (VertexInterface<T> endVertex) {
+	    addEdge (endVertex, 0);
     }
 
     @Override
@@ -212,8 +209,8 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
     }
 
     @Override
-    public void setPredecessor(final VertexInterface<T> predecessor) {
-        this.previousVertex  =  predecessor;
+    public void setPredecessor (VertexInterface<T> predecessor) {
+	    this.previousVertex = predecessor;
     }
 
     @Override
@@ -223,12 +220,12 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
 
     @Override
     public boolean hasPredecessor() {
-        return this.previousVertex !=  null;
+	    return this.previousVertex != null;
     }
 
     @Override
-    public void setCost(final double _cost) {
-        cost  =  _cost;
+    public void setCost (double _cost) {
+	    cost = _cost;
     }
 
     @Override
@@ -238,15 +235,15 @@ class Vertex<T> implements VertexInterface<T>,  java.io.Serializable {
 
     //we need to rewrite equals method to make sure we can compare two Vertexs.
     @Override
-    public boolean equals(final Object other) {
+    public boolean equals (Object other) {
         boolean result;
-        if ((other  ==  null) || (getClass() !=  other.getClass())) {
-            result  =  false;
-        } else {
-            Vertex<T> otherVertex  =  (Vertex<T>) other;
-            // using label to judge whether it's equal.
-            result  =  label.equals(otherVertex.label);
-        }
+	    if ((other == null) || (getClass () != other.getClass ())) {
+		    result = false;
+	    } else {
+		    Vertex<T> otherVertex = (Vertex<T>) other;
+		    // using label to judge whether it's equal.
+		    result = label.equals (otherVertex.label);
+	    }
         return result;
     }
 }

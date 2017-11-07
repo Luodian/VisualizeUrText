@@ -19,8 +19,5 @@
         <module name="images" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="images" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -15,8 +15,8 @@ public interface VertexInterface<T> {
     public void unvisit();
 
     public boolean isVisited();
-
-    public void addEdge(VertexInterface<T> endVertex,  double edgeWeight);
+	
+	public void addEdge (VertexInterface<T> endVertex, double edgeWeight);
 
     public void addEdge(VertexInterface<T> endVertex);
 
