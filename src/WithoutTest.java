@@ -128,6 +128,7 @@ public class WithoutTest {
 				"wish -> you -> asked -> her : 3\n"));
 	}
 	
+	
 	@Test
 	public void testBridge1() throws Exception {
 //TODO: Test goes here...
@@ -186,5 +187,4 @@ public class WithoutTest {
 		String str = new Without().queryBridgeWords("src/sample/Test/3.txt","to","strange");
 		assertTrue(str.equals("The bridge word from \"to\" to \"strange\" is: explore."));
 	}
-	
 } 
