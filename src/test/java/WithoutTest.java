@@ -1,7 +1,6 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import sample.Without;
 
 import static org.junit.Assert.assertTrue;
 
@@ -29,7 +28,7 @@ public class WithoutTest {
 	@Test
 	public void caseA () throws Exception {
 		//TODO: Test goes here...
-		String str = without.calcShortestPath ("src/sample/Test/a.txt", "to", "civilizations");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/a.txt", "to", "civilizations");
 		System.out.println (str);
 		assertTrue (str.equals ("to -> explore -> strange -> new -> civilizations : 4\n" +
 				"to -> seek -> out -> new -> civilizations : 4\n"));
@@ -37,21 +36,21 @@ public class WithoutTest {
 	
 	@Test
 	public void caseB () throws Exception {
-		String str = without.calcShortestPath ("src/sample/Test/b.txt", "", "");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/b.txt", "", "");
 		System.out.println (str);
 		assertTrue (str.equals ("空图"));
 	}
 	
 	@Test
 	public void caseC () throws Exception {
-		String str = without.calcShortestPath ("src/sample/Test/c.txt", "", "");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/c.txt", "", "");
 		System.out.println (str);
 		assertTrue (str.equals ("起点和终点均为空"));
 	}
 	
 	@Test
 	public void caseD () throws Exception {
-		String str = without.calcShortestPath ("src/sample/Test/d.txt", "to", "");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/d.txt", "to", "");
 		System.out.println (str);
 		assertTrue (str.equals ("to -> explore : 1\n" +
 				"to -> explore -> strange : 2\n" +
@@ -71,14 +70,14 @@ public class WithoutTest {
 	
 	@Test
 	public void caseE () throws Exception {
-		String str = without.calcShortestPath ("src/sample/Test/e.txt", "", "civilizations");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/e.txt", "", "civilizations");
 		System.out.println (str);
 		assertTrue (str.equals ("起点不能为空"));
 	}
 	
 	@Test
 	public void caseF () throws Exception {
-		String str = without.calcShortestPath ("src/sample/Test/f.txt", "explore", "life");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/f.txt", "explore", "life");
 		System.out.println (str);
 		assertTrue (str.equals ("explore -> strange -> new -> life : 3\n"));
 	}
@@ -86,7 +85,7 @@ public class WithoutTest {
 	@Test
 	public void caseG () throws Exception {
 		//TODO: Test goes here...
-		String str = without.calcShortestPath ("src/sample/Test/g.txt", "to", "civilizations");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/g.txt", "to", "civilizations");
 		System.out.println (str);
 		assertTrue (str.equals ("to -> explore -> strange -> new -> civilizations : 4\n" +
 				"to -> seek -> out -> new -> civilizations : 4\n"));
@@ -95,7 +94,7 @@ public class WithoutTest {
 	@Test
 	public void caseH () throws Exception {
 		//TODO: Test goes here...
-		String str = without.calcShortestPath ("src/sample/Test/h.txt", "to", "to");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/h.txt", "to", "to");
 		System.out.println (str);
 		assertTrue (str.equals ("to : 0\n"));
 	}
@@ -103,7 +102,7 @@ public class WithoutTest {
 	@Test
 	public void caseI () throws Exception {
 		//TODO: Test goes here...
-		String str = without.calcShortestPath ("src/sample/Test/i.txt", "new", "new");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/i.txt", "new", "new");
 		System.out.println (str);
 		assertTrue (str.equals ("new : 0\n"));
 	}
@@ -111,7 +110,7 @@ public class WithoutTest {
 	@Test
 	public void caseJ () throws Exception {
 		//TODO: Test goes here...
-		String str = without.calcShortestPath ("src/sample/Test/j.txt", "to", "brave");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/j.txt", "to", "brave");
 		System.out.println (str);
 		assertTrue (str.equals ("to -> explore -> strange -> new -> civilizations -> here -> is -> your -> brave : 8\n" +
 				"to -> seek -> out -> new -> civilizations -> here -> is -> your -> brave : 8\n"));
@@ -120,7 +119,7 @@ public class WithoutTest {
 	@Test(timeout = 5000)
 	public void caseK () throws Exception {
 		//TODO: Test goes here...
-		String str = without.calcShortestPath ("src/sample/Test/k.txt", "wish", "her");
+		String str = without.calcShortestPath ("src/main/java/sample/Test/k.txt", "wish", "her");
 		System.out.println (str);
 		assertTrue (str.equals ("wish -> you -> tell -> her : 3\n" +
 				"wish -> you -> liked -> her : 3\n" +
@@ -132,7 +131,7 @@ public class WithoutTest {
 	@Test
 	public void testBridge1() throws Exception {
 //TODO: Test goes here...
-		String str = new Without().queryBridgeWords("src/sample/Test/1.txt","zero","four");
+		String str = new Without().queryBridgeWords("src/main/java/sample/Test/1.txt","zero","four");
 		System.out.println (str);
 		assertTrue(str.equals("No \"zero\" and \"four\" in the graph"));
 		
@@ -141,14 +140,14 @@ public class WithoutTest {
 	@Test
 	public void testBridge2() throws Exception {
 //TODO: Test goes here...
-		String str = new Without().queryBridgeWords("src/sample/Test/1.txt","zero","one");
+		String str = new Without().queryBridgeWords("src/main/java/sample/Test/1.txt","zero","one");
 		assertTrue(str.equals("No \"zero\" in the graph"));
 	}
 	
 	@Test
 	public void testBridge3() throws Exception {
 //TODO: Test goes here...
-		String str = new Without().queryBridgeWords("src/sample/Test/1.txt","one","four");
+		String str = new Without().queryBridgeWords("src/main/java/sample/Test/1.txt","one","four");
 		assertTrue(str.equals("No \"four\" in the graph"));
 	}
 	
@@ -156,7 +155,7 @@ public class WithoutTest {
 	@Test
 	public void testBridge4() throws Exception {
 //TODO: Test goes here...
-		String str = new Without().queryBridgeWords("src/sample/Test/5.txt","one","one");
+		String str = new Without().queryBridgeWords("src/main/java/sample/Test/5.txt","one","one");
 		assertTrue(str.equals("No bridge words from \"one\" to \"one\""));
 	}
 	
@@ -164,13 +163,13 @@ public class WithoutTest {
 	@Test
 	public void testBridge5() throws Exception {
 //TODO: Test goes here...
-		String str = new Without().queryBridgeWords("src/sample/Test/6.txt","an","computer");
+		String str = new Without().queryBridgeWords("src/main/java/sample/Test/6.txt","an","computer");
 		assertTrue(str.equals("The bridge word from \"an\" to \"computer\" is: phone."));
 	}
 	@Test
 	public void testBridge6() throws Exception {
 //TODO: Test goes here...
-		String str = new Without().queryBridgeWords("src/sample/Test/6.txt","an","computer");
+		String str = new Without().queryBridgeWords("src/main/java/sample/Test/6.txt","an","computer");
 		System.out.println (str);
 		assertTrue(str.equals("The bridge word from \"an\" to \"computer\" is: phone."));
 	}
@@ -178,13 +177,13 @@ public class WithoutTest {
 	@Test
 	public void testBridge7() throws Exception {
 //TODO: Test goes here...
-		String str = new Without().queryBridgeWords("src/sample/Test/3.txt","worlds","seek");
+		String str = new Without().queryBridgeWords("src/main/java/sample/Test/3.txt","worlds","seek");
 		assertTrue(str.equals("The bridge word from \"worlds\" to \"seek\" is: to."));
 	}
 	@Test
 	public void testBridge8() throws Exception {
 //TODO: Test goes here...
-		String str = new Without().queryBridgeWords("src/sample/Test/3.txt","to","strange");
+		String str = new Without().queryBridgeWords("src/main/java/sample/Test/3.txt","to","strange");
 		assertTrue(str.equals("The bridge word from \"to\" to \"strange\" is: explore."));
 	}
 } 

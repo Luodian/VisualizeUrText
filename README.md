@@ -1,6 +1,6 @@
 # Lab1-Visualize-Ur-Text
 
-[![Build Status](https://travis-ci.org/Luodian/VisualizeUrText.svg?branch=master)](https://travis-ci.org/Luodian/VisualizeUrText)
+[![Build Status](https://travis-ci.org/Luodian/VisualizeUrText.svg?branch=Lab6-White-Boxing)](https://travis-ci.org/Luodian/VisualizeUrText)
 
 Collaborators: 武德浩，李博
 
