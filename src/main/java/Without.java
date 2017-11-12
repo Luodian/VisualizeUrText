@@ -22,6 +22,7 @@ public class Without {
 		originLine = "";
 		parent.clear();
 		totalList.clear();
+		//wtf
 		InputStreamReader reader  = new InputStreamReader(System.in);
 		try {
 			reader  =  new InputStreamReader(new FileInputStream(fileName));
