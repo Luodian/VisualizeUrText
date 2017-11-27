@@ -1,0 +1,36 @@
+.root {
+    -fx-background-image: url("/sample/resources/images/c.svg");
+    -fx-background-color:transparent;
+    -fx-background-size: 1650 1500;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.button {
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-radius: 50;
+    -fx-background-radius:50;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+#middleButton {
+    -fx-background-color: transparent;
+    -fx-border-radius: 0;
+    -fx-background-radius:0;
+}
+#tiplabel{
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

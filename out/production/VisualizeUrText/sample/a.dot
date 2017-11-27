@@ -1,0 +1,11 @@
+digraph {
+b->c[label = 1 ][color = GREEN]
+c->a[label = 1 ][color = GREEN]
+a->b[label = 1 ][color = GREEN]
+b->c[label = 1 ][color = GREEN]
+a->b[label = 1 ][ color = BLACK ]
+a->d[label = 1 ][ color = BLACK ]
+b->c[label = 1 ][ color = BLACK ]
+c->a[label = 1 ][ color = BLACK ]
+d->e[label = 1 ][ color = BLACK ]
+}
